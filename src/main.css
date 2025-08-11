@@ -1,0 +1,86 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background: #151515;
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  width: 100%;
+}
+
+html {
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  width: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust this value based on navbar height */
+}
+
+/* Navbar hover effects */
+nav a:hover {
+  color: #ffc947 !important;
+  transition: color 0.3s ease;
+}
+
+/* Smooth scrolling for anchor links */
+section {
+  scroll-margin-top: 80px; /* Ensures content appears below fixed navbar */
+}
+
+/* Form input focus styles */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px rgba(255, 201, 71, 0.5) !important;
+  border: 1px solid #ffc947 !important;
+}
+
+/* Button hover effects */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 201, 71, 0.3);
+}
+
+/* Project card hover effects */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(24, 90, 219, 0.3);
+}
+
+/* Skills progress animation */
+@keyframes progressAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--progress-width);
+  }
+}
+
+.progress-bar {
+  animation: progressAnimation 2s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+  
+  section {
+    scroll-margin-top: 70px;
+  }
+  
+  nav {
+    padding: 10px 0 !important;
+  }
+  
+  nav .container div:last-child {
+    display: none; /* Hide nav links on mobile - you can implement mobile menu later */
+  }
+}
