@@ -17,7 +17,7 @@ const Skills = () => (
         {/* Frontend Skills */}
         <div className="col-lg-4 mb-4">
           <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
-            <h4 style={{ color: '#ffc947', marginBottom: '20px', textAlign: 'center' }}>Frontend</h4>
+            <h4 style={{ color: '#4a9eff', marginBottom: '20px', textAlign: 'center' }}>Frontend</h4>
             <div className="skill-item mb-3">
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
                 <span style={{ color: '#fff' }}>React</span>
@@ -60,7 +60,7 @@ const Skills = () => (
         {/* Backend Skills */}
         <div className="col-lg-4 mb-4">
           <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
-            <h4 style={{ color: '#ffc947', marginBottom: '20px', textAlign: 'center' }}>Backend</h4>
+            <h4 style={{ color: '#4a9eff', marginBottom: '20px', textAlign: 'center' }}>Backend</h4>
             <div className="skill-item mb-3">
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
                 <span style={{ color: '#fff' }}>Node.js</span>
@@ -103,7 +103,7 @@ const Skills = () => (
         {/* Tools & Others */}
         <div className="col-lg-4 mb-4">
           <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
-            <h4 style={{ color: '#ffc947', marginBottom: '20px', textAlign: 'center' }}>Tools & Others</h4>
+            <h4 style={{ color: '#4a9eff', marginBottom: '20px', textAlign: 'center' }}>Tools & Others</h4>
             <div className="skill-item mb-3">
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
                 <span style={{ color: '#fff' }}>Git</span>

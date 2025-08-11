@@ -66,13 +66,13 @@ const Projects = () => (
               </div>
               <div style={{ display: 'flex', gap: '10px' }}>
                 <a href="#" style={{ 
-                  color: '#ffc947', 
+                  color: '#4a9eff', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
                   fontWeight: '500'
                 }}>Live Demo</a>
                 <a href="#" style={{ 
-                  color: '#ffc947', 
+                  color: '#4a9eff', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
                   fontWeight: '500'
@@ -94,7 +94,7 @@ const Projects = () => (
           }}>
             <div style={{ 
               height: '200px', 
-              background: 'linear-gradient(135deg, #ffc947, #185adb)', 
+              background: 'linear-gradient(135deg, #4a9eff, #185adb)', 
               display: 'flex', 
               alignItems: 'center', 
               justifyContent: 'center' 
@@ -134,13 +134,13 @@ const Projects = () => (
               </div>
               <div style={{ display: 'flex', gap: '10px' }}>
                 <a href="#" style={{ 
-                  color: '#ffc947', 
+                  color: '#4a9eff', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
                   fontWeight: '500'
                 }}>App Store</a>
                 <a href="#" style={{ 
-                  color: '#ffc947', 
+                  color: '#4a9eff', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
                   fontWeight: '500'
@@ -162,7 +162,7 @@ const Projects = () => (
           }}>
             <div style={{ 
               height: '200px', 
-              background: 'linear-gradient(135deg, #0a1931, #ffc947)', 
+              background: 'linear-gradient(135deg, #0a1931, #4a9eff)', 
               display: 'flex', 
               alignItems: 'center', 
               justifyContent: 'center' 
@@ -202,13 +202,13 @@ const Projects = () => (
               </div>
               <div style={{ display: 'flex', gap: '10px' }}>
                 <a href="#" style={{ 
-                  color: '#ffc947', 
+                  color: '#4a9eff', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
                   fontWeight: '500'
                 }}>Live Demo</a>
                 <a href="#" style={{ 
-                  color: '#ffc947', 
+                  color: '#4a9eff', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
                   fontWeight: '500'

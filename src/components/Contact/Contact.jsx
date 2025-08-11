@@ -40,7 +40,7 @@ const Contact = () => {
           <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
             Get In Touch
           </h2>
-          <div style={{ width: '60px', height: '4px', background: '#ffc947', margin: '0 auto 30px' }}></div>
+          <div style={{ width: '60px', height: '4px', background: '#4a9eff', margin: '0 auto 30px' }}></div>
           <p style={{ color: '#eaf0fb', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
             Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
           </p>
@@ -57,7 +57,7 @@ const Contact = () => {
                   <div style={{ 
                     width: '50px', 
                     height: '50px', 
-                    background: '#ffc947', 
+                    background: '#4a9eff', 
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -78,7 +78,7 @@ const Contact = () => {
                   <div style={{ 
                     width: '50px', 
                     height: '50px', 
-                    background: '#ffc947', 
+                    background: '#4a9eff', 
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -99,7 +99,7 @@ const Contact = () => {
                   <div style={{ 
                     width: '50px', 
                     height: '50px', 
-                    background: '#ffc947', 
+                    background: '#4a9eff', 
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -121,7 +121,7 @@ const Contact = () => {
                   <a href="#" style={{ 
                     width: '40px', 
                     height: '40px', 
-                    background: '#ffc947', 
+                    background: '#4a9eff', 
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -134,7 +134,7 @@ const Contact = () => {
                   <a href="#" style={{ 
                     width: '40px', 
                     height: '40px', 
-                    background: '#ffc947', 
+                    background: '#4a9eff', 
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -147,7 +147,7 @@ const Contact = () => {
                   <a href="#" style={{ 
                     width: '40px', 
                     height: '40px', 
-                    background: '#ffc947', 
+                    background: '#4a9eff', 
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -262,7 +262,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   style={{
-                    background: '#ffc947',
+                    background: '#4a9eff',
                     color: '#0a1931',
                     border: 'none',
                     padding: '15px 40px',

@@ -48,19 +48,19 @@ const About = () => (
               <div style={{ background: '#1a1a1a', padding: '40px', borderRadius: '10px', border: '2px solid #185adb' }}>
                 <h4 style={{ color: '#fff', marginBottom: '20px' }}>What I Do</h4>
                 <div style={{ marginBottom: '20px' }}>
-                  <h5 style={{ color: '#ffc947', fontSize: '1.2rem', marginBottom: '10px' }}>🌐 Web Development</h5>
+                  <h5 style={{ color: '#4a9eff', fontSize: '1.2rem', marginBottom: '10px' }}>🌐 Web Development</h5>
                   <p style={{ color: '#eaf0fb', fontSize: '0.95rem' }}>
                     Full-stack web development using React, Node.js, and modern frameworks.
                   </p>
                 </div>
                 <div style={{ marginBottom: '20px' }}>
-                  <h5 style={{ color: '#ffc947', fontSize: '1.2rem', marginBottom: '10px' }}>📱 Mobile Development</h5>
+                  <h5 style={{ color: '#4a9eff', fontSize: '1.2rem', marginBottom: '10px' }}>📱 Mobile Development</h5>
                   <p style={{ color: '#eaf0fb', fontSize: '0.95rem' }}>
                     Cross-platform mobile apps using React Native and Flutter.
                   </p>
                 </div>
                 <div style={{ marginBottom: '20px' }}>
-                  <h5 style={{ color: '#ffc947', fontSize: '1.2rem', marginBottom: '10px' }}>☁️ Cloud Solutions</h5>
+                  <h5 style={{ color: '#4a9eff', fontSize: '1.2rem', marginBottom: '10px' }}>☁️ Cloud Solutions</h5>
                   <p style={{ color: '#eaf0fb', fontSize: '0.95rem' }}>
                     Scalable cloud architecture using AWS and modern deployment practices.
                   </p>

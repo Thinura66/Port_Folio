@@ -22,7 +22,7 @@ const Home = () => (
       <div className="row align-items-center justify-content-center">
         <div className="col-lg-6 text-white">
           <h1 style={{ fontSize: '3.5rem', fontWeight: 700, marginBottom: '20px' }}>
-            Hi, I'm <span style={{ color: '#ffc947' }}>Thinura Kahaduwa</span>
+            Hi, I'm <span style={{ color: '#4a9eff' }}>Thinura Kahaduwa</span>
           </h1>
           <h2 style={{ fontSize: '2rem', marginBottom: '20px', color: '#eaf0fb' }}>
             Software Engineer

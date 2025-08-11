@@ -14,7 +14,7 @@ const Navbar = () => (
     <div className="container-fluid px-4">
       <div className="d-flex justify-content-between align-items-center">
         <a href="#home" style={{ 
-          color: '#ffc947', 
+          color: '#4a9eff', 
           fontSize: '1.8rem', 
           fontWeight: 'bold', 
           textDecoration: 'none' 
