@@ -32,7 +32,7 @@ const Contact = () => {
   return (
     <section id="contact" style={{ 
       padding: '80px 0', 
-      background: 'linear-gradient(135deg, #0a1931 0%, #185adb 100%)',
+      background: 'linear-gradient(180deg, #151515 0%, #0a1931 30%, #185adb 100%)',
       position: 'relative'
     }}>
       <div className="container">
@@ -40,7 +40,7 @@ const Contact = () => {
           <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
             Get In Touch
           </h2>
-          <div style={{ width: '60px', height: '4px', background: '#4a9eff', margin: '0 auto 30px' }}></div>
+          <div style={{ width: '60px', height: '4px', background: '#2c5aa0', margin: '0 auto 30px' }}></div>
           <p style={{ color: '#eaf0fb', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
             Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
           </p>
@@ -68,7 +68,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 style={{ color: '#fff', marginBottom: '5px', fontSize: '1rem' }}>Email</h4>
-                    <p style={{ color: '#eaf0fb', margin: 0, fontSize: '0.9rem' }}>thinura.kahaduwa@email.com</p>
+                    <p style={{ color: '#eaf0fb', margin: 0, fontSize: '0.9rem' }}>thinurakahaduwa@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -89,7 +89,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 style={{ color: '#fff', marginBottom: '5px', fontSize: '1rem' }}>Phone</h4>
-                    <p style={{ color: '#eaf0fb', margin: 0, fontSize: '0.9rem' }}>+94 77 123 4567</p>
+                    <p style={{ color: '#eaf0fb', margin: 0, fontSize: '0.9rem' }}>+94 76 6568189</p>
                   </div>
                 </div>
               </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 style={{ color: '#fff', marginBottom: '5px', fontSize: '1rem' }}>Location</h4>
-                    <p style={{ color: '#eaf0fb', margin: 0, fontSize: '0.9rem' }}>Colombo, Sri Lanka</p>
+                    <p style={{ color: '#eaf0fb', margin: 0, fontSize: '0.9rem' }}>Galle, Sri Lanka</p>
                   </div>
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Skills = () => (
-  <section id="skills" style={{ padding: '80px 0', background: '#121212' }}>
+  <section id="skills" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #151515 0%, #0e1117 50%, #121212 100%)' }}>
     <div className="container">
       <div className="text-center mb-5">
         <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
@@ -14,87 +14,103 @@ const Skills = () => (
       </div>
       
       <div className="row">
-        {/* Frontend Skills */}
+        {/* Frontend & Frameworks */}
         <div className="col-lg-4 mb-4">
           <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
-            <h4 style={{ color: '#4a9eff', marginBottom: '20px', textAlign: 'center' }}>Frontend</h4>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>React</span>
-                <span style={{ color: '#eaf0fb' }}>90%</span>
+            <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Frontend & Frameworks</h4>
+            <div className="row text-center">
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
+                       alt="React" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>React</span>
+                </div>
               </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '90%', borderRadius: '4px' }}></div>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
+                       alt="JavaScript" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>JavaScript</span>
+                </div>
               </div>
-            </div>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>JavaScript</span>
-                <span style={{ color: '#eaf0fb' }}>85%</span>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
+                       alt="HTML5" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>HTML5</span>
+                </div>
               </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '85%', borderRadius: '4px' }}></div>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
+                       alt="CSS3" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>CSS3</span>
+                </div>
               </div>
-            </div>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>HTML/CSS</span>
-                <span style={{ color: '#eaf0fb' }}>95%</span>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" 
+                       alt="Bootstrap" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Bootstrap</span>
+                </div>
               </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '95%', borderRadius: '4px' }}></div>
-              </div>
-            </div>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>Bootstrap</span>
-                <span style={{ color: '#eaf0fb' }}>80%</span>
-              </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '80%', borderRadius: '4px' }}></div>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://avatars.githubusercontent.com/u/54212428?s=200&v=4" 
+                       alt="Chakra UI" style={{ width: '50px', height: '50px', marginBottom: '10px', borderRadius: '8px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Chakra UI</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Backend Skills */}
+        {/* Backend & Databases */}
         <div className="col-lg-4 mb-4">
           <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
-            <h4 style={{ color: '#4a9eff', marginBottom: '20px', textAlign: 'center' }}>Backend</h4>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>Node.js</span>
-                <span style={{ color: '#eaf0fb' }}>80%</span>
+            <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Backend & Databases</h4>
+            <div className="row text-center">
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" 
+                       alt="Node.js" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Node.js</span>
+                </div>
               </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '80%', borderRadius: '4px' }}></div>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+                       alt="Python" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Python</span>
+                </div>
               </div>
-            </div>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>Python</span>
-                <span style={{ color: '#eaf0fb' }}>75%</span>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" 
+                       alt="Spring Boot" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Spring Boot</span>
+                </div>
               </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '75%', borderRadius: '4px' }}></div>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" 
+                       alt="Firebase" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Firebase</span>
+                </div>
               </div>
-            </div>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>MongoDB</span>
-                <span style={{ color: '#eaf0fb' }}>70%</span>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" 
+                       alt="MongoDB" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>MongoDB</span>
+                </div>
               </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '70%', borderRadius: '4px' }}></div>
-              </div>
-            </div>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>Express.js</span>
-                <span style={{ color: '#eaf0fb' }}>75%</span>
-              </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '75%', borderRadius: '4px' }}></div>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
+                       alt="MySQL" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>MySQL</span>
+                </div>
               </div>
             </div>
           </div>
@@ -103,41 +119,49 @@ const Skills = () => (
         {/* Tools & Others */}
         <div className="col-lg-4 mb-4">
           <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
-            <h4 style={{ color: '#4a9eff', marginBottom: '20px', textAlign: 'center' }}>Tools & Others</h4>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>Git</span>
-                <span style={{ color: '#eaf0fb' }}>85%</span>
+            <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Tools & Others</h4>
+            <div className="row text-center">
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" 
+                       alt="Git" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Git</span>
+                </div>
               </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '85%', borderRadius: '4px' }}></div>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://juliety.com/wp-content/uploads/2023/08/desktop-app@2x-edited.png" 
+                       alt="ClickUp" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>ClickUp</span>
+                </div>
               </div>
-            </div>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>Docker</span>
-                <span style={{ color: '#eaf0fb' }}>65%</span>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" 
+                       alt="Azure" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Azure</span>
+                </div>
               </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '65%', borderRadius: '4px' }}></div>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" 
+                       alt="Figma" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Figma</span>
+                </div>
               </div>
-            </div>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>AWS</span>
-                <span style={{ color: '#eaf0fb' }}>60%</span>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" 
+                       alt="VS Code" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>VS Code</span>
+                </div>
               </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '60%', borderRadius: '4px' }}></div>
-              </div>
-            </div>
-            <div className="skill-item mb-3">
-              <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
-                <span style={{ color: '#fff' }}>Figma</span>
-                <span style={{ color: '#eaf0fb' }}>70%</span>
-              </div>
-              <div style={{ background: '#333', height: '8px', borderRadius: '4px' }}>
-                <div style={{ background: '#185adb', height: '100%', width: '70%', borderRadius: '4px' }}></div>
+              <div className="col-6 mb-4">
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+                       alt="GitHub" style={{ width: '50px', height: '50px', marginBottom: '10px', filter: 'invert(1)' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>GitHub</span>
+                </div>
               </div>
             </div>
           </div>

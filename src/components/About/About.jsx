@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react';  
 
 const About = () => (
-  <section id="about" style={{ padding: '80px 0', background: '#151515' }}>
+  <section id="about" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #1a1a1a 0%, #0f1419 50%, #151515 100%)' }}>
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-10">

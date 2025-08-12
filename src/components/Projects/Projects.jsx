@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Projects = () => (
-  <section id="projects" style={{ padding: '80px 0', background: '#151515' }}>
+  <section id="projects" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #121212 0%, #0c0f14 50%, #151515 100%)' }}>
     <div className="container">
       <div className="text-center mb-5">
         <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
