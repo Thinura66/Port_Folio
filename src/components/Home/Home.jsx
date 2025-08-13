@@ -20,6 +20,7 @@ const Home = () => {
       width: '100%',
       minHeight: '100vh',
       paddingTop: '120px',
+      paddingLeft: '120px',
       paddingBottom: '80px',
       background: 'linear-gradient(180deg, #0a1931 0%, #185adb 50%, #1a1a1a 100%)',
       display: 'flex',
@@ -43,8 +44,8 @@ const Home = () => {
           </h2>
 
           <p className={`${isLoaded ? 'animate-fade-in-up animate-delay-2' : 'animate-on-load'}`} style={{ fontSize: '1.2rem', marginBottom: '30px', lineHeight: 1.6, color: '#eaf0fb' }}>
-            I'm a passionate software engineer with expertise in modern web development. 
-            I love creating innovative solutions and bringing ideas to life through code.
+            I am a 3rd year undergraduate at the University of Moratuwa, passionate about software engineering and modern web development. 
+            I enjoy building innovative, user-friendly solutions and turning creative ideas into functional applications.
           </p>
           <div className={`${isLoaded ? 'animate-fade-in-up animate-delay-3' : 'animate-on-load'}`} style={{ marginBottom: '30px' }}>
             <a href="#contact" className="btn btn-primary btn-lg me-3" style={{ marginRight: '15px' }}>

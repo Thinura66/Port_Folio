@@ -5,21 +5,20 @@ const About = () => (
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-10">
-          <div className="text-center mb-5">
+          <div className="text-center mb-5 scroll-animate">
             <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
               About Me
             </h2>
             <div style={{ width: '60px', height: '4px', background: '#185adb', margin: '0 auto 30px' }}></div>
           </div>
           <div className="row align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-6 scroll-animate-left">
               <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '20px' }}>
                 Software Engineer & Problem Solver
               </h3>
               <p style={{ color: '#eaf0fb', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '20px' }}>
-                I'm a passionate software engineer with over 3 years of experience in building 
-                scalable web applications and mobile solutions. I specialize in modern JavaScript 
-                frameworks and love turning complex problems into simple, beautiful designs.
+               As a 3rd year undergraduate at the University of Moratuwa, I am driven to grow into a versatile software engineer. 
+               I have a strong interest in designing efficient systems, exploring modern web technologies, and developing solutions that combine functionality with great user experience.
               </p>
               <p style={{ color: '#eaf0fb', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '30px' }}>
                 When I'm not coding, you can find me exploring new technologies, contributing to 
@@ -31,7 +30,7 @@ const About = () => (
                     <strong>Location:</strong> <span style={{ color: '#eaf0fb' }}>Sri Lanka</span>
                   </p>
                   <p style={{ color: '#fff', marginBottom: '10px' }}>
-                    <strong>Experience:</strong> <span style={{ color: '#eaf0fb' }}>3+ Years</span>
+                    <strong>3rd Year Undergraduate</strong> 
                   </p>
                 </div>
                 <div className="col-sm-6">
@@ -44,7 +43,7 @@ const About = () => (
                 </div>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 scroll-animate-right">
               <div style={{ background: '#1a1a1a', padding: '40px', borderRadius: '10px', border: '2px solid #185adb' }}>
                 <h4 style={{ color: '#fff', marginBottom: '20px' }}>What I Do</h4>
                 <div style={{ marginBottom: '20px' }}>
@@ -62,7 +61,7 @@ const About = () => (
                 <div style={{ marginBottom: '20px' }}>
                   <h5 style={{ color: '#4a9eff', fontSize: '1.2rem', marginBottom: '10px' }}>☁️ Cloud Solutions</h5>
                   <p style={{ color: '#eaf0fb', fontSize: '0.95rem' }}>
-                    Scalable cloud architecture using AWS and modern deployment practices.
+                    Designing and implementing scalable cloud architecture on Microsoft Azure using modern deployment practices.
                   </p>
                 </div>
               </div>

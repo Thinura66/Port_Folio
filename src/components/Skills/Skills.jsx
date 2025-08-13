@@ -3,7 +3,7 @@ import React from 'react';
 const Skills = () => (
   <section id="skills" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #151515 0%, #0e1117 50%, #121212 100%)' }}>
     <div className="container">
-      <div className="text-center mb-5">
+      <div className="text-center mb-5 scroll-animate">
         <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
           My Skills
         </h2>
@@ -15,7 +15,7 @@ const Skills = () => (
       
       <div className="row">
         {/* Frontend & Frameworks */}
-        <div className="col-lg-4 mb-4">
+        <div className="col-lg-4 mb-4 scroll-animate scroll-animate-delay-1">
           <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
             <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Frontend & Frameworks</h4>
             <div className="row text-center">
@@ -66,7 +66,7 @@ const Skills = () => (
         </div>
 
         {/* Backend & Databases */}
-        <div className="col-lg-4 mb-4">
+        <div className="col-lg-4 mb-4 scroll-animate scroll-animate-delay-2">
           <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
             <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Backend & Databases</h4>
             <div className="row text-center">
@@ -117,7 +117,7 @@ const Skills = () => (
         </div>
 
         {/* Tools & Others */}
-        <div className="col-lg-4 mb-4">
+        <div className="col-lg-4 mb-4 scroll-animate scroll-animate-delay-3">
           <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
             <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Tools & Others</h4>
             <div className="row text-center">
