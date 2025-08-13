@@ -224,7 +224,7 @@ const Contact = () => {
                   }}>
                     <span style={{ color: '#0a1931', fontWeight: 'bold' }}>git</span>
                   </a>
-                  <a href="#" style={{ 
+                  <a href="https://github.com/Thinura66" style={{ 
                     width: '40px', 
                     height: '40px', 
                     background: '#4a9eff', 

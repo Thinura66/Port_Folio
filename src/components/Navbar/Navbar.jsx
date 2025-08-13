@@ -1,75 +1,74 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Navbar = () => (
-  <nav style={{ 
-    background: 'rgba(10, 25, 49, 0.95)', 
-    padding: '15px 0', 
-    position: 'fixed', 
-    top: 0, 
-    width: '100%', 
-    zIndex: 1000,
-    backdropFilter: 'blur(10px)',
-    overflow: 'hidden'
-  }}>
-    <div className="container-fluid px-4">
-      <div className="d-flex justify-content-between align-items-center">
-        <a href="#home" style={{ 
-          color: '#2c5aa0', 
-          fontSize: '1.8rem', 
-          fontWeight: 'bold', 
-          textDecoration: 'none' 
-        }}>
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <nav className="bg-primary-900/95 backdrop-blur-md fixed top-0 w-full z-50 px-4 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <a href="#home" className="text-primary-500 text-2xl font-bold hover:text-primary-400 transition-colors">
           Thinura
         </a>
-        <div className="d-flex">
-          <a href="#home" style={{ 
-            color: '#eaf0fb', 
-            textDecoration: 'none', 
-            marginRight: '30px',
-            fontSize: '1.1rem',
-            transition: 'color 0.3s ease'
-          }}>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-8">
+          <a href="#home" className="text-gray-200 hover:text-primary-400 transition-colors text-lg">
             Home
           </a>
-          <a href="#about" style={{ 
-            color: '#eaf0fb', 
-            textDecoration: 'none', 
-            marginRight: '30px',
-            fontSize: '1.1rem',
-            transition: 'color 0.3s ease'
-          }}>
+          <a href="#about" className="text-gray-200 hover:text-primary-400 transition-colors text-lg">
             About
           </a>
-          <a href="#skills" style={{ 
-            color: '#eaf0fb', 
-            textDecoration: 'none', 
-            marginRight: '30px',
-            fontSize: '1.1rem',
-            transition: 'color 0.3s ease'
-          }}>
+          <a href="#skills" className="text-gray-200 hover:text-primary-400 transition-colors text-lg">
             Skills
           </a>
-          <a href="#projects" style={{ 
-            color: '#eaf0fb', 
-            textDecoration: 'none', 
-            marginRight: '30px',
-            fontSize: '1.1rem',
-            transition: 'color 0.3s ease'
-          }}>
+          <a href="#projects" className="text-gray-200 hover:text-primary-400 transition-colors text-lg">
             Projects
           </a>
-          <a href="#contact" style={{ 
-            color: '#eaf0fb', 
-            textDecoration: 'none',
-            fontSize: '1.1rem',
-            transition: 'color 0.3s ease'
-          }}>
+          <a href="#contact" className="text-gray-200 hover:text-primary-400 transition-colors text-lg">
             Contact
           </a>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {isMenuOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </div>
-    </div>
-  </nav>
-);
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden mt-4 pb-4">
+          <div className="flex flex-col space-y-4">
+            <a href="#home" className="text-gray-200 hover:text-primary-400 transition-colors text-lg" onClick={() => setIsMenuOpen(false)}>
+              Home
+            </a>
+            <a href="#about" className="text-gray-200 hover:text-primary-400 transition-colors text-lg" onClick={() => setIsMenuOpen(false)}>
+              About
+            </a>
+            <a href="#skills" className="text-gray-200 hover:text-primary-400 transition-colors text-lg" onClick={() => setIsMenuOpen(false)}>
+              Skills
+            </a>
+            <a href="#projects" className="text-gray-200 hover:text-primary-400 transition-colors text-lg" onClick={() => setIsMenuOpen(false)}>
+              Projects
+            </a>
+            <a href="#contact" className="text-gray-200 hover:text-primary-400 transition-colors text-lg" onClick={() => setIsMenuOpen(false)}>
+              Contact
+            </a>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
 
 export default Navbar;

@@ -218,13 +218,7 @@ const Projects = () => {
                 }}>MySQL</span>
               </div>
               <div style={{ display: 'flex', gap: '10px' }}>
-                <a href="#" style={{ 
-                  color: '#4a9eff', 
-                  textDecoration: 'none', 
-                  fontSize: '0.9rem',
-                  fontWeight: '500'
-                }}>App Store</a>
-                <a href="#" style={{ 
+                <a href="https://github.com/Thinura66/PointEdge-Frontend" style={{ 
                   color: '#4a9eff', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
