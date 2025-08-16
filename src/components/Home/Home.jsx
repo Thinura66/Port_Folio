@@ -32,6 +32,15 @@ const Home = () => {
             </div>
           </h1>
           
+          {/* Profile Image - Mobile Only (appears after name) */}
+          <div className="flex justify-center lg:hidden mb-6">
+            <img 
+              src={profileImg} 
+              alt="Thinura Kahaduwa" 
+              className={`w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-full border-6 border-white shadow-2xl ${isLoaded ? 'animate-zoom-in animate-delay-2 floating' : 'animate-on-load'}`}
+            />
+          </div>
+          
           <h2 
             className={`text-xl sm:text-2xl lg:text-3xl mb-4 lg:mb-6 text-blue-200 ${isLoaded ? 'animate-fade-in-up animate-delay-1' : 'animate-on-load'}`}
           >
@@ -60,8 +69,8 @@ const Home = () => {
           </div>
         </div>
         
-        {/* Profile Image */}
-        <div className="flex-1 flex justify-center lg:justify-end">
+        {/* Profile Image - Desktop Only */}
+        <div className="hidden lg:flex flex-1 justify-center lg:justify-end">
           <img 
             src={profileImg} 
             alt="Thinura Kahaduwa" 
