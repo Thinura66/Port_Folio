@@ -18,9 +18,6 @@ const About = () => (
           </div>
           
           <div className="scroll-animate-left">
-            <h3 className="text-white text-xl md:text-2xl lg:text-3xl mb-4 lg:mb-6">
-              Software Engineer & Problem Solver
-            </h3>
             <p className="text-blue-100 text-base md:text-lg lg:text-xl leading-relaxed mb-4 lg:mb-6">
                As a 3rd year undergraduate at the University of Moratuwa, I am driven to grow into a versatile software engineer. 
                I have a strong interest in designing efficient systems, exploring modern web technologies, and developing solutions that combine functionality with great user experience.

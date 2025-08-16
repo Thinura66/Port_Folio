@@ -38,7 +38,7 @@ const Home = () => {
           <h2 
             className={`text-xl sm:text-2xl lg:text-3xl mb-4 lg:mb-6 text-blue-200 ${isLoaded ? 'animate-fade-in-up animate-delay-1' : 'animate-on-load'}`}
           >
-            3<sup className="text-sm align-super">rd</sup> year undergraduate
+            3rd year undergraduate
           </h2>
 
           <p className={`text-base sm:text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed text-blue-100 max-w-2xl mx-auto lg:mx-0 ${isLoaded ? 'animate-fade-in-up animate-delay-2' : 'animate-on-load'}`}>
