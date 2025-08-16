@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import profileImg from '../../assets/profile.jpg';
+import cvFile from '../../assets/224097E CV.pdf';
 
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -10,13 +11,15 @@ const Home = () => {
       setIsLoaded(true);
     }, 100);
     
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
   <section
     id="home"
-    className="w-full min-h-screen pt-20 md:pt-32 pb-20 px-4 md:px-8 lg:px-24 flex items-center justify-center overflow-hidden"
+    className="w-full min-h-screen pt-20 md:pt-24 pb-4 md:pb-8 px-4 md:px-8 lg:px-24 flex items-center justify-center overflow-hidden"
     style={{
       background: 'linear-gradient(180deg, #0a1931 0%, #185adb 50%, #1a1a1a 100%)'
     }}
@@ -25,9 +28,11 @@ const Home = () => {
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 lg:gap-12">
         {/* Text Content */}
         <div className="text-white text-center lg:text-left flex-1 lg:pr-8">
-          <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6 ${isLoaded ? 'animate-fade-in-up' : 'animate-on-load'}`}>
-            <div className="mb-2">Hi, I'm</div>
-            <div className={`text-white ${isLoaded ? 'typing-effect' : ''}`}>Thinura Kahaduwa</div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6">
+            <div className={`mb-2 ${isLoaded ? 'animate-fade-in-left' : 'animate-on-load'}`}>Hi, I'm</div>
+            <div className={`text-white ${isLoaded ? 'animate-fade-in-right animate-delay-1' : 'animate-on-load'}`}>
+              Thinura Kahaduwa
+            </div>
           </h1>
           
           <h2 
@@ -43,14 +48,15 @@ const Home = () => {
           
           <div className={`mb-6 lg:mb-8 ${isLoaded ? 'animate-fade-in-up animate-delay-3' : 'animate-on-load'}`}>
             <a 
-              href="#contact" 
-              className="inline-block bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg text-lg font-medium transition-colors mr-4 mb-4 lg:mb-0"
+              href={cvFile}
+              download="Thinura_Kahaduwa_CV.pdf"
+              className="inline-block border-1 border-white bg-primary-500 hover:bg-primary-900 text-white px-3 py-3 rounded-lg text-lg font-medium transition-colors mr-4 mb-4 lg:mb-0"
             >
-              Get In Touch
+              📄 Download CV
             </a>
             <a 
               href="#projects" 
-              className="inline-block border-2 border-white text-white hover:bg-white hover:text-primary-900 px-6 py-3 rounded-lg text-lg font-medium transition-all"
+              className="inline-block border-1 border-white text-white hover:bg-primary-900 hover:text-primary-900 px-6 py-3 rounded-lg text-lg font-medium transition-all"
             >
               View My Work
             </a>

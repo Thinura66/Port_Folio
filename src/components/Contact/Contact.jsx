@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import GitHubLogo from '../../assets/contact/GitHub.png';
+import LinkedInLogo from '../../assets/contact/linkedin.png';
+import InstagramLogo from '../../assets/contact/Instagram-.png';
+import FacebookLogo from '../../assets/contact/Facebook.png';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -129,8 +133,8 @@ const Contact = () => {
         <div className="row">
           {/* Contact Information */}
           <div className="col-lg-4 mb-5 scroll-animate-left">
-            <div style={{ padding: '40px 30px', background: 'rgba(255,255,255,0.1)', borderRadius: '15px' }}>
-              <h3 style={{ color: '#fff', marginBottom: '30px', fontSize: '1.5rem' }}>Contact Information</h3>
+            <div style={{ padding: '40px 35px', background: 'rgba(255,255,255,0.1)', borderRadius: '15px' }}>
+              <h3 style={{ color: '#fff', marginBottom: '35px', fontSize: '1.5rem' }}>Contact Information</h3>
               
               <div style={{ marginBottom: '30px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
@@ -197,45 +201,105 @@ const Contact = () => {
 
               <div style={{ marginTop: '30px' }}>
                 <h4 style={{ color: '#fff', marginBottom: '20px' }}>Follow Me</h4>
-                <div style={{ display: 'flex', gap: '15px' }}>
-                  <a href="#" style={{ 
-                    width: '40px', 
-                    height: '40px', 
-                    background: '#4a9eff', 
+                <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+                  {/* LinkedIn */}
+                  <a href="https://linkedin.com/in/thinura-kahaduwa" target="_blank" rel="noopener noreferrer" style={{ 
+                    width: '50px', 
+                    height: '50px', 
+                    background: '#fff', 
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     textDecoration: 'none',
-                    transition: 'transform 0.3s ease'
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                    padding: '10px',
+                    border: '2px solid #0077B5'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.1)';
+                    e.target.style.boxShadow = '0 4px 15px rgba(0, 119, 181, 0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = 'none';
                   }}>
-                    <span style={{ color: '#0a1931', fontWeight: 'bold' }}>in</span>
+                    <img src={LinkedInLogo} alt="LinkedIn" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </a>
-                  <a href="#" style={{ 
-                    width: '40px', 
-                    height: '40px', 
-                    background: '#4a9eff', 
+                  
+                  {/* GitHub */}
+                  <a href="https://github.com/Thinura66" target="_blank" rel="noopener noreferrer" style={{ 
+                    width: '50px', 
+                    height: '50px', 
+                    background: '#fff', 
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     textDecoration: 'none',
-                    transition: 'transform 0.3s ease'
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                    padding: '10px',
+                    border: '2px solid #333'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.1)';
+                    e.target.style.boxShadow = '0 4px 15px rgba(51, 51, 51, 0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = 'none';
                   }}>
-                    <span style={{ color: '#0a1931', fontWeight: 'bold' }}>git</span>
+                    <img src={GitHubLogo} alt="GitHub" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </a>
-                  <a href="https://github.com/Thinura66" style={{ 
-                    width: '40px', 
-                    height: '40px', 
-                    background: '#4a9eff', 
+                  
+                  {/* Instagram */}
+                  <a href="https://www.instagram.com/thinura_sk_66/" target="_blank" rel="noopener noreferrer" style={{ 
+                    width: '50px', 
+                    height: '50px', 
+                    background: '#fff', 
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     textDecoration: 'none',
-                    transition: 'transform 0.3s ease'
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                    padding: '10px',
+                    border: '2px solid #E4405F'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.1)';
+                    e.target.style.boxShadow = '0 4px 15px rgba(225, 48, 108, 0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = 'none';
                   }}>
-                    <span style={{ color: '#0a1931', fontWeight: 'bold' }}>tw</span>
+                    <img src={InstagramLogo} alt="Instagram" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </a>
+                  
+                  {/* Facebook */}
+                  <a href="https://www.facebook.com/share/15mt4NRs3R/" target="_blank" rel="noopener noreferrer" style={{ 
+                    width: '50px', 
+                    height: '50px', 
+                    background: '#fff', 
+                    borderRadius: '50%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textDecoration: 'none',
+                    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                    padding: '10px',
+                    border: '2px solid #1877F2'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.target.style.transform = 'scale(1.1)';
+                    e.target.style.boxShadow = '0 4px 15px rgba(24, 119, 242, 0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.transform = 'scale(1)';
+                    e.target.style.boxShadow = 'none';
+                  }}>
+                    <img src={FacebookLogo} alt="Facebook" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </a>
                 </div>
               </div>
@@ -245,7 +309,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="col-lg-8 scroll-animate-right">
             <div style={{ 
-              padding: '40px', 
+              padding: '35px', 
               background: 'rgba(255,255,255,0.1)', 
               borderRadius: '15px',
               backdropFilter: 'blur(10px)',
@@ -363,7 +427,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Your Message"
-                    rows="6"
+                    rows="3"
                     required
                     style={{
                       width: '100%',
@@ -385,7 +449,7 @@ const Contact = () => {
                     background: '#4a9eff',
                     color: '#0a1931',
                     border: 'none',
-                    padding: '15px 40px',
+                    padding: '13px 30px',
                     borderRadius: '10px',
                     fontSize: '1.1rem',
                     fontWeight: '600',

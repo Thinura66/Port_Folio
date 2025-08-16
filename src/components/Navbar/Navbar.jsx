@@ -4,8 +4,8 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-primary-900/95 backdrop-blur-md fixed top-0 w-full z-50 px-4 py-4">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <nav className="bg-primary-900/95 backdrop-blur-md fixed top-0 w-full z-50 px-4 py-2">
+      <div className="max-w-7xl mx-auto flex justify-between items-center h-12">
         {/* Logo */}
         <a href="#home" className="text-primary-500 text-2xl font-bold hover:text-primary-400 transition-colors">
           Thinura

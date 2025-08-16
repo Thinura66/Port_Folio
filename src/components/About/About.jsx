@@ -1,69 +1,77 @@
 import React from 'react';  
 
 const About = () => (
-  <section id="about" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #1a1a1a 0%, #0f1419 50%, #151515 100%)' }}>
-    <div className="container">
-      <div className="row justify-content-center">
-        <div className="col-lg-10">
-          <div className="text-center mb-5 scroll-animate">
-            <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
+  <section 
+    id="about" 
+    className="py-8 md:py-20 px-4 md:px-8"
+    style={{ background: 'linear-gradient(180deg, #1a1a1a 0%, #0f1419 50%, #151515 100%)' }}
+  >
+    <div className="max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6 lg:gap-12">
+        {/* Text Content */}
+        <div className="flex-1 text-center lg:text-left lg:pr-8">
+          <div className="mb-6 lg:mb-8 scroll-animate">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 lg:mb-6">
               About Me
             </h2>
-            <div style={{ width: '60px', height: '4px', background: '#185adb', margin: '0 auto 30px' }}></div>
+            <div className="w-16 h-1 bg-primary-500 mx-auto lg:mx-0 mb-6 lg:mb-8"></div>
           </div>
-          <div className="row align-items-center">
-            <div className="col-lg-6 scroll-animate-left">
-              <h3 style={{ color: '#fff', fontSize: '1.8rem', marginBottom: '20px' }}>
-                Software Engineer & Problem Solver
-              </h3>
-              <p style={{ color: '#eaf0fb', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '20px' }}>
+          
+          <div className="scroll-animate-left">
+            <h3 className="text-white text-xl md:text-2xl lg:text-3xl mb-4 lg:mb-6">
+              Software Engineer & Problem Solver
+            </h3>
+            <p className="text-blue-100 text-base md:text-lg lg:text-xl leading-relaxed mb-4 lg:mb-6">
                As a 3rd year undergraduate at the University of Moratuwa, I am driven to grow into a versatile software engineer. 
                I have a strong interest in designing efficient systems, exploring modern web technologies, and developing solutions that combine functionality with great user experience.
-              </p>
-              <p style={{ color: '#eaf0fb', fontSize: '1.1rem', lineHeight: 1.7, marginBottom: '30px' }}>
+            </p>
+            <p className="text-blue-100 text-base md:text-lg lg:text-xl leading-relaxed mb-6 lg:mb-8">
                 When I'm not coding, you can find me exploring new technologies, contributing to 
                 open-source projects, or sharing knowledge with the developer community.
-              </p>
-              <div className="row">
-                <div className="col-sm-6">
-                  <p style={{ color: '#fff', marginBottom: '10px' }}>
-                    <strong>Location:</strong> <span style={{ color: '#eaf0fb' }}>Sri Lanka</span>
-                  </p>
-                  <p style={{ color: '#fff', marginBottom: '10px' }}>
-                    <strong>3rd Year Undergraduate</strong> 
-                  </p>
-                </div>
-                <div className="col-sm-6">
-                  <p style={{ color: '#fff', marginBottom: '10px' }}>
-                    <strong>Freelance:</strong> <span style={{ color: '#eaf0fb' }}>Available</span>
-                  </p>
-                  <p style={{ color: '#fff', marginBottom: '10px' }}>
-                    <strong>Languages:</strong> <span style={{ color: '#eaf0fb' }}>English, Sinhala</span>
-                  </p>
-                </div>
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 lg:mb-8">
+              <div>
+                <p className="text-white mb-2">
+                  <strong>Location:</strong> <span className="text-blue-100">Sri Lanka</span>
+                </p>
+                <p className="text-white mb-2">
+                  <strong>3rd Year Undergraduate</strong> 
+                </p>
+              </div>
+              <div>
+                <p className="text-white mb-2">
+                  <strong>Freelance:</strong> <span className="text-blue-100">Available</span>
+                </p>
+                <p className="text-white mb-2">
+                  <strong>Languages:</strong> <span className="text-blue-100">English, Sinhala</span>
+                </p>
               </div>
             </div>
-            <div className="col-lg-6 scroll-animate-right">
-              <div style={{ background: '#1a1a1a', padding: '40px', borderRadius: '10px', border: '2px solid #185adb' }}>
-                <h4 style={{ color: '#fff', marginBottom: '20px' }}>What I Do</h4>
-                <div style={{ marginBottom: '20px' }}>
-                  <h5 style={{ color: '#4a9eff', fontSize: '1.2rem', marginBottom: '10px' }}>🌐 Web Development</h5>
-                  <p style={{ color: '#eaf0fb', fontSize: '0.95rem' }}>
-                    Full-stack web development using React, Node.js, and modern frameworks.
-                  </p>
-                </div>
-                <div style={{ marginBottom: '20px' }}>
-                  <h5 style={{ color: '#4a9eff', fontSize: '1.2rem', marginBottom: '10px' }}>📱 Mobile Development</h5>
-                  <p style={{ color: '#eaf0fb', fontSize: '0.95rem' }}>
-                    Cross-platform mobile apps using React Native and Flutter.
-                  </p>
-                </div>
-                <div style={{ marginBottom: '20px' }}>
-                  <h5 style={{ color: '#4a9eff', fontSize: '1.2rem', marginBottom: '10px' }}>☁️ Cloud Solutions</h5>
-                  <p style={{ color: '#eaf0fb', fontSize: '0.95rem' }}>
-                    Designing and implementing scalable cloud architecture on Microsoft Azure using modern deployment practices.
-                  </p>
-                </div>
+          </div>
+        </div>
+        
+        {/* Skills/Services Content */}
+        <div className="flex-1 scroll-animate-right">
+          <div className="bg-gray-900 p-6 md:p-8 lg:p-10 rounded-xl border-2 border-primary-500">
+            <h4 className="text-white text-xl md:text-2xl mb-6">What I Do</h4>
+            <div className="space-y-6">
+              <div>
+                <h5 className="text-primary-400 text-lg md:text-xl mb-3">🌐 Web Development</h5>
+                <p className="text-blue-100 text-sm md:text-base">
+                  Full-stack web development using React, Node.js, and modern frameworks.
+                </p>
+              </div>
+              <div>
+                <h5 className="text-primary-400 text-lg md:text-xl mb-3">📱 Mobile Development</h5>
+                <p className="text-blue-100 text-sm md:text-base">
+                  Cross-platform mobile apps using React Native and Flutter.
+                </p>
+              </div>
+              <div>
+                <h5 className="text-primary-400 text-lg md:text-xl mb-3">☁️ Cloud Solutions</h5>
+                <p className="text-blue-100 text-sm md:text-base">
+                  Designing and implementing scalable cloud architecture on Microsoft Azure using modern deployment practices.
+                </p>
               </div>
             </div>
           </div>
