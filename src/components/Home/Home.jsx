@@ -20,9 +20,6 @@ const Home = () => {
   <section
     id="home"
     className="w-full min-h-screen pt-20 md:pt-24 pb-4 md:pb-8 px-4 md:px-8 lg:px-24 flex items-center justify-center overflow-hidden"
-    style={{
-      background: 'linear-gradient(180deg, #0a1931 0%, #185adb 50%, #1a1a1a 100%)'
-    }}
   >
     <div className="max-w-7xl mx-auto w-full">
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 lg:gap-12">

@@ -14,7 +14,14 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="relative">
+      {/* Global floating particles */}
+      <div className="global-particles">
+        {[...Array(10)].map((_, i) => (
+          <div key={i} className="global-particle"></div>
+        ))}
+      </div>
+      
       <Navbar />
       <Home />
       <About />

@@ -14,10 +14,46 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #fff;
-  background: #151515;
+  background: linear-gradient(-45deg, #142849, #022a78, #1a1a1a, #113760, #0f1419);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(-45deg, 
+    rgba(10, 25, 49, 0.8), 
+    rgba(7, 39, 104, 0.6), 
+    rgba(26, 26, 26, 0.8), 
+    rgba(12, 53, 101, 0.6),
+    rgba(15, 20, 25, 0.8)
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 25s ease infinite;
+  z-index: -2;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(74,158,255,0.3)"><animate attributeName="cy" values="20;80;20" dur="3s" repeatCount="indefinite"/></circle><circle cx="50" cy="50" r="1" fill="rgba(24,90,219,0.4)"><animate attributeName="cy" values="50;10;50" dur="4s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1.5" fill="rgba(74,158,255,0.2)"><animate attributeName="cy" values="30;90;30" dur="5s" repeatCount="indefinite"/></circle></svg>') repeat;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.3;
 }
 
 html {
@@ -245,6 +281,43 @@ button:hover {
   }
 }
 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatingParticles {
+  0% {
+    transform: translateY(100vh) translateX(0px) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90vh) translateX(10px) rotate(45deg) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(10vh) translateX(-10px) rotate(315deg) scale(1);
+  }
+  100% {
+    transform: translateY(-10vh) translateX(0px) rotate(360deg) scale(0);
+    opacity: 0;
+  }
+}
+
 
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out forwards;
@@ -463,4 +536,132 @@ html {
 
 .loading {
   animation: spin 1s linear infinite;
+}
+
+/* Global floating particles */
+.global-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.global-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatingParticles 15s infinite linear;
+}
+
+.global-particle:nth-child(1) { 
+  left: 5%; 
+  width: 3px; 
+  height: 3px; 
+  background: rgba(74, 158, 255, 0.4);
+  animation-delay: 0s; 
+  animation-duration: 12s;
+}
+.global-particle:nth-child(2) { 
+  left: 15%; 
+  width: 2px; 
+  height: 2px; 
+  background: rgba(24, 90, 219, 0.3);
+  animation-delay: 1s; 
+  animation-duration: 16s;
+}
+.global-particle:nth-child(3) { 
+  left: 25%; 
+  width: 4px; 
+  height: 4px; 
+  background: rgba(74, 158, 255, 0.5);
+  animation-delay: 2s; 
+  animation-duration: 14s;
+}
+.global-particle:nth-child(4) { 
+  left: 35%; 
+  width: 2px; 
+  height: 2px; 
+  background: rgba(10, 25, 49, 0.4);
+  animation-delay: 3s; 
+  animation-duration: 18s;
+}
+.global-particle:nth-child(5) { 
+  left: 45%; 
+  width: 3px; 
+  height: 3px; 
+  background: rgba(24, 90, 219, 0.4);
+  animation-delay: 4s; 
+  animation-duration: 13s;
+}
+.global-particle:nth-child(6) { 
+  left: 55%; 
+  width: 5px; 
+  height: 5px; 
+  background: rgba(74, 158, 255, 0.3);
+  animation-delay: 5s; 
+  animation-duration: 17s;
+}
+.global-particle:nth-child(7) { 
+  left: 65%; 
+  width: 2px; 
+  height: 2px; 
+  background: rgba(24, 90, 219, 0.5);
+  animation-delay: 6s; 
+  animation-duration: 15s;
+}
+.global-particle:nth-child(8) { 
+  left: 75%; 
+  width: 3px; 
+  height: 3px; 
+  background: rgba(74, 158, 255, 0.4);
+  animation-delay: 7s; 
+  animation-duration: 19s;
+}
+.global-particle:nth-child(9) { 
+  left: 85%; 
+  width: 4px; 
+  height: 4px; 
+  background: rgba(10, 25, 49, 0.3);
+  animation-delay: 8s; 
+  animation-duration: 16s;
+}
+.global-particle:nth-child(10) { 
+  left: 95%; 
+  width: 2px; 
+  height: 2px; 
+  background: rgba(24, 90, 219, 0.4);
+  animation-delay: 9s; 
+  animation-duration: 14s;
+}
+
+/* Make sections transparent to show background */
+section {
+  background: transparent !important;
+  scroll-margin-top: 60px;
+  position: relative;
+}
+
+/* Section overlays for subtle color variations */
+section#home {
+  background: linear-gradient(180deg, rgba(10, 25, 49, 0.1) 0%, rgba(24, 90, 219, 0.1) 50%, rgba(26, 26, 26, 0.1) 100%) !important;
+}
+
+section#about {
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.1) 0%, rgba(15, 20, 25, 0.1) 50%, rgba(21, 21, 21, 0.1) 100%) !important;
+}
+
+section#skills {
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0.1) 0%, rgba(10, 25, 49, 0.1) 50%, rgba(24, 90, 219, 0.1) 100%) !important;
+}
+
+section#projects {
+  background: linear-gradient(180deg, rgba(24, 90, 219, 0.1) 0%, rgba(26, 26, 26, 0.1) 50%, rgba(15, 20, 25, 0.1) 100%) !important;
+}
+
+section#contact {
+  background: linear-gradient(180deg, rgba(15, 20, 25, 0.1) 0%, rgba(10, 25, 49, 0.1) 30%, rgba(24, 90, 219, 0.1) 100%) !important;
 }
