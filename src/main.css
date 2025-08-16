@@ -398,6 +398,38 @@ html {
     scroll-padding-top: 30px;
   }
   
+  /* Optimize background animations for mobile performance */
+  body {
+    background-size: 200% 200% !important;
+    animation-duration: 30s !important;
+  }
+  
+  body::before {
+    background-size: 200% 200% !important;
+    animation-duration: 35s !important;
+    opacity: 0.7;
+  }
+  
+  /* Reduce SVG particles complexity on mobile */
+  body::after {
+    opacity: 0.1 !important;
+    background-size: 50px 50px !important;
+  }
+  
+  /* Reduce global particles on mobile for better performance */
+  .global-particles {
+    transform: scale(0.8);
+  }
+  
+  .global-particle {
+    animation-duration: 20s !important;
+  }
+  
+  /* Hide some particles on smaller screens */
+  .global-particle:nth-child(n+6) {
+    display: none;
+  }
+  
   section {
     scroll-margin-top: 30px;
   }
@@ -430,6 +462,62 @@ html {
   }
 }
 
+/* Additional optimizations for very small mobile devices */
+@media (max-width: 480px) {
+  /* Further reduce animations for better performance */
+  body {
+    animation-duration: 40s !important;
+  }
+  
+  body::before {
+    animation-duration: 45s !important;
+    opacity: 0.5;
+  }
+  
+  /* Completely disable SVG particles on very small screens */
+  body::after {
+    display: none;
+  }
+  
+  /* Further reduce global particles */
+  .global-particle:nth-child(n+4) {
+    display: none;
+  }
+  
+  .global-particle {
+    animation-duration: 25s !important;
+  }
+}
+
+/* Fallback for older mobile browsers that don't support complex animations */
+@media (max-width: 768px) and (max-device-width: 768px) {
+  body::before,
+  body::after {
+    animation-play-state: paused;
+  }
+  
+  .global-particles {
+    display: none;
+  }
+}
+
+/* Respect user's preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  body::before,
+  body::after {
+    animation-duration: 0s !important;
+    animation: none !important;
+  }
+  
+  .global-particles {
+    display: none;
+  }
+  
+  .global-particle {
+    animation: none !important;
+  }
+}
 
 /* Scroll-triggered animations */
 .scroll-animate {
