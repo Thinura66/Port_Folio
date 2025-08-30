@@ -753,3 +753,50 @@ section#projects {
 section#contact {
   background: linear-gradient(180deg, rgba(15, 20, 25, 0.1) 0%, rgba(10, 25, 49, 0.1) 30%, rgba(24, 90, 219, 0.1) 100%) !important;
 }
+
+/* Footer Styles */
+footer {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(10, 10, 10, 0.95) 100%) !important;
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(10, 25, 49, 0.1), rgba(26, 26, 26, 0.1), rgba(15, 20, 25, 0.1));
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Footer animations */
+@keyframes footerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-animate {
+  animation: footerFadeIn 0.8s ease-out;
+}
+
+/* Social icon hover effects */
+footer .social-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+footer .social-icon:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}

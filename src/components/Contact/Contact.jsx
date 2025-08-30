@@ -468,6 +468,33 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      
+      {/* Footer integrated within Contact section */}
+      <div style={{
+        marginTop: '60px',
+        paddingTop: '30px',
+        borderTop: '2px solid rgba(255,255,255,0.1)'
+      }}>
+        <div className="container">
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            padding: '0 20px'
+          }}>
+            <p style={{
+              color: '#ffffff',
+              fontSize: '16px',
+              margin: '0',
+              fontWeight: '400',
+              letterSpacing: '0.5px'
+            }}>
+              &copy; {new Date().getFullYear()} Thinura Kahaduwa. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
