@@ -14,9 +14,9 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #fff;
-  background: linear-gradient(-45deg, #142849, #022a78, #1a1a1a, #113760, #0f1419);
-  background-size: 400% 400%;
-  animation: gradientShift 20s ease infinite;
+  background: linear-gradient(-45deg, #0a1931, #142849, #1a1a1a, #0f1419, #113760, #0d1b2a);
+  background-size: 600% 600%;
+  animation: gradientShift 35s ease infinite;
   scroll-behavior: smooth;
   overflow-x: hidden;
   width: 100%;
@@ -31,14 +31,15 @@ body::before {
   right: 0;
   bottom: 0;
   background: linear-gradient(-45deg, 
-    rgba(10, 25, 49, 0.8), 
-    rgba(7, 39, 104, 0.6), 
-    rgba(26, 26, 26, 0.8), 
-    rgba(12, 53, 101, 0.6),
-    rgba(15, 20, 25, 0.8)
+    rgba(10, 25, 49, 0.9), 
+    rgba(20, 40, 73, 0.8), 
+    rgba(26, 26, 26, 0.9), 
+    rgba(15, 20, 25, 0.9),
+    rgba(17, 55, 96, 0.7),
+    rgba(13, 27, 42, 0.8)
   );
-  background-size: 400% 400%;
-  animation: gradientShift 25s ease infinite;
+  background-size: 600% 600%;
+  animation: gradientShift 45s ease infinite;
   z-index: -2;
   pointer-events: none;
 }
@@ -50,7 +51,7 @@ body::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(74,158,255,0.3)"><animate attributeName="cy" values="20;80;20" dur="3s" repeatCount="indefinite"/></circle><circle cx="50" cy="50" r="1" fill="rgba(24,90,219,0.4)"><animate attributeName="cy" values="50;10;50" dur="4s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1.5" fill="rgba(74,158,255,0.2)"><animate attributeName="cy" values="30;90;30" dur="5s" repeatCount="indefinite"/></circle></svg>') repeat;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(74,158,255,0.2)"><animate attributeName="cy" values="20;80;20" dur="6s" repeatCount="indefinite"/></circle><circle cx="50" cy="50" r="1" fill="rgba(24,90,219,0.25)"><animate attributeName="cy" values="50;10;50" dur="8s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1.5" fill="rgba(74,158,255,0.15)"><animate attributeName="cy" values="30;90;30" dur="10s" repeatCount="indefinite"/></circle></svg>') repeat;
   z-index: -1;
   pointer-events: none;
   opacity: 0.3;
@@ -286,13 +287,13 @@ button:hover {
     background-position: 0% 50%;
   }
   25% {
-    background-position: 100% 50%;
+    background-position: 100% 25%;
   }
   50% {
-    background-position: 100% 100%;
+    background-position: 75% 100%;
   }
   75% {
-    background-position: 0% 100%;
+    background-position: 25% 75%;
   }
   100% {
     background-position: 0% 50%;
@@ -430,6 +431,8 @@ html {
     display: none;
   }
   
+  /* Optimize flowing skills icons for mobile - handled in component */
+  
   section {
     scroll-margin-top: 30px;
   }
@@ -487,6 +490,8 @@ html {
   .global-particle {
     animation-duration: 25s !important;
   }
+  
+  /* Further optimize flowing skills icons for very small screens - handled in component */
 }
 
 /* Fallback for older mobile browsers that don't support complex animations */
@@ -497,6 +502,10 @@ html {
   }
   
   .global-particles {
+    display: none;
+  }
+  
+  .flowing-skills-icons {
     display: none;
   }
 }
@@ -515,6 +524,14 @@ html {
   }
   
   .global-particle {
+    animation: none !important;
+  }
+  
+  .flowing-skills-icons {
+    display: none;
+  }
+  
+  .flowing-skill-icon {
     animation: none !important;
   }
 }
@@ -775,6 +792,106 @@ footer::before {
   pointer-events: none;
 }
 
+/* Flowing Skills Icons Background Animation */
+@keyframes flowingIcons {
+  0% {
+    transform: translateY(100vh) translateX(-50px) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+    transform: translateY(90vh) translateX(30px) rotate(45deg) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(50vh) translateX(-50px) rotate(180deg) scale(1.2);
+  }
+  90% {
+    opacity: 0.6;
+    transform: translateY(10vh) translateX(60px) rotate(315deg) scale(0.8);
+  }
+  100% {
+    transform: translateY(-10vh) translateX(-30px) rotate(360deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes flowingIconsReverse {
+  0% {
+    transform: translateY(-10vh) translateX(50px) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+    transform: translateY(10vh) translateX(-30px) rotate(-45deg) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(50vh) translateX(50px) rotate(-180deg) scale(1.2);
+  }
+  90% {
+    opacity: 0.6;
+    transform: translateY(90vh) translateX(-60px) rotate(-315deg) scale(0.8);
+  }
+  100% {
+    transform: translateY(100vh) translateX(30px) rotate(-360deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes flowingIconsDiagonal {
+  0% {
+    transform: translateY(100vh) translateX(-100vw) rotate(0deg) scale(0.5);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.7;
+    transform: translateY(75vh) translateX(-50vw) rotate(90deg) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(50vh) translateX(0vw) rotate(180deg) scale(1.3);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translateY(25vh) translateX(50vw) rotate(270deg) scale(0.8);
+  }
+  100% {
+    transform: translateY(-10vh) translateX(100vw) rotate(360deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* Flowing Skills Icons Container */
+.flowing-skills-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Simple test animation to verify CSS is working */
+@keyframes simpleFloat {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(50vh) rotate(180deg);
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Flowing skill icon base styles - now handled inline in component */
+
 /* Footer animations */
 @keyframes footerFadeIn {
   from {
@@ -799,4 +916,177 @@ footer .social-icon {
 footer .social-icon:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* New Animated Background Styles */
+.animated-background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -10;
+  overflow: hidden;
+}
+
+.main-animated-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #0a1931, #185adb, #2c5aa0, #0a1931);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  opacity: 0.2;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Tech Icons Floating Animation */
+.floating-tech-icon {
+  position: absolute;
+  opacity: 0.2;
+  animation: floatTechIcon linear infinite;
+  filter: blur(0px);
+  transition: all 0.3s ease;
+}
+
+.floating-tech-icon-reverse {
+  position: absolute;
+  opacity: 0.15;
+  animation: floatTechIconReverse linear infinite;
+  filter: blur(0px);
+  transition: all 0.3s ease;
+}
+
+@keyframes floatTechIcon {
+  0% {
+    transform: translateY(20px) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-10px) translateX(10px) rotate(180deg);
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-40px) translateX(-5px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatTechIconReverse {
+  0% {
+    transform: translateY(-20px) translateX(0px) rotate(360deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(10px) translateX(-10px) rotate(180deg);
+    opacity: 0.25;
+  }
+  90% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: translateY(40px) translateX(5px) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* Grid Pattern Overlay */
+.grid-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background-image: 
+    linear-gradient(rgba(24, 90, 219, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 90, 219, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Radial Gradient Overlay */
+.radial-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(10, 25, 49, 0.3) 50%, rgba(10, 25, 49, 0.8) 100%);
+  pointer-events: none;
+}
+
+/* Text size classes for tech icons */
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .floating-tech-icon,
+  .floating-tech-icon-reverse {
+    opacity: 0.1;
+  }
+  
+  .text-4xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  
+  .grid-pattern-overlay {
+    background-size: 30px 30px;
+  }
 }

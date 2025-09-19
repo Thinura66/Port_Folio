@@ -79,74 +79,7 @@ const Projects = () => {
       </div>
       
       <div className="row">
-        {/* Project 1 */}
-        <div className="col-lg-4 col-md-6 mb-4 scroll-animate scroll-animate-delay-1">
-          <div style={{ 
-            background: '#1a1a1a', 
-            borderRadius: '10px', 
-            overflow: 'hidden', 
-            border: '2px solid #185adb',
-            transition: 'transform 0.3s ease',
-            height: '100%'
-          }}>
-            <div style={{ 
-              height: '200px', 
-              backgroundImage: 'url("https://via.placeholder.com/400x200/185adb/ffffff?text=E-Commerce+Platform")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-              position: 'relative'
-            }}>
-            </div>
-            <div style={{ padding: '25px' }}>
-              <h3 style={{ color: '#fff', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '10px' }}>E-Commerce Platform</h3>
-              <h4 style={{ color: '#fff', marginBottom: '15px' }}>Full Stack E-Commerce</h4>
-              <p style={{ color: '#eaf0fb', fontSize: '0.95rem', lineHeight: 1.6, marginBottom: '20px' }}>
-                A complete e-commerce solution with user authentication, payment integration, 
-                and admin dashboard. Built with React, Node.js, and MongoDB.
-              </p>
-              <div style={{ marginBottom: '20px' }}>
-                <span style={{ 
-                  background: '#185adb', 
-                  color: '#fff', 
-                  padding: '4px 8px', 
-                  borderRadius: '4px', 
-                  fontSize: '0.8rem',
-                  marginRight: '8px'
-                }}>React</span>
-                <span style={{ 
-                  background: '#185adb', 
-                  color: '#fff', 
-                  padding: '4px 8px', 
-                  borderRadius: '4px', 
-                  fontSize: '0.8rem',
-                  marginRight: '8px'
-                }}>Node.js</span>
-                <span style={{ 
-                  background: '#185adb', 
-                  color: '#fff', 
-                  padding: '4px 8px', 
-                  borderRadius: '4px', 
-                  fontSize: '0.8rem'
-                }}>MongoDB</span>
-              </div>
-              <div style={{ display: 'flex', gap: '10px' }}>
-                <a href="#" style={{ 
-                  color: '#4a9eff', 
-                  textDecoration: 'none', 
-                  fontSize: '0.9rem',
-                  fontWeight: '500'
-                }}>Live Demo</a>
-                <a href="#" style={{ 
-                  color: '#4a9eff', 
-                  textDecoration: 'none', 
-                  fontSize: '0.9rem',
-                  fontWeight: '500'
-                }}>GitHub</a>
-              </div>
-            </div>
-          </div>
-        </div>
+        
 
         {/* Project 2 */}
         <div className="col-lg-4 col-md-6 mb-4 scroll-animate scroll-animate-delay-2">
