@@ -83,11 +83,13 @@ const Projects = () => {
 
         {/* Project 1 */}
         <div className="col-lg-4 col-md-6 mb-4 scroll-animate scroll-animate-delay-2">
-          <div style={{ 
-            background: '#1a1a1a', 
-            borderRadius: '10px', 
+          <div className="animated-border" style={{ 
+            borderRadius: '15px',
+            backdropFilter: 'blur(30px)',
+            WebkitBackdropFilter: 'blur(30px)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            position: 'relative',
             overflow: 'hidden', 
-            border: '2px solid #185adb',
             transition: 'transform 0.3s ease',
             height: '100%'
           }}>
@@ -177,11 +179,13 @@ const Projects = () => {
 
         {/* Project 2 */}
         <div className="col-lg-4 col-md-6 mb-4 scroll-animate scroll-animate-delay-3">
-          <div style={{ 
-            background: '#1a1a1a', 
-            borderRadius: '10px', 
+          <div className="animated-border" style={{ 
+            borderRadius: '15px',
+            backdropFilter: 'blur(30px)',
+            WebkitBackdropFilter: 'blur(30px)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            position: 'relative',
             overflow: 'hidden', 
-            border: '2px solid #185adb',
             transition: 'transform 0.3s ease',
             height: '100%'
           }}>
@@ -298,11 +302,13 @@ const Projects = () => {
 
         {/* Project 4 - Portfolio */}
         <div className="col-lg-4 col-md-6 mb-4 scroll-animate scroll-animate-delay-4">
-          <div style={{ 
-            background: '#1a1a1a', 
-            borderRadius: '10px', 
+          <div className="animated-border" style={{ 
+            borderRadius: '15px',
+            backdropFilter: 'blur(30px)',
+            WebkitBackdropFilter: 'blur(30px)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            position: 'relative',
             overflow: 'hidden', 
-            border: '2px solid #185adb',
             transition: 'transform 0.3s ease',
             height: '100%'
           }}>

@@ -56,15 +56,61 @@ const Home = () => {
             <a 
               href={cvFile}
               download="Thinura_Kahaduwa_CV.pdf"
-              className="inline-block border-1 border-white bg-primary-500 hover:bg-primary-900 text-white px-3 py-3 rounded-lg text-lg font-medium transition-colors mr-4 mb-4 lg:mb-0"
+              style={{
+                display: 'inline-block',
+                padding: '12px 30px',
+                background: 'linear-gradient(135deg, #185adb 0%, #4a9eff 100%)',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '8px',
+                fontSize: '1rem',
+                fontWeight: '600',
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 15px rgba(24, 90, 219, 0.3)',
+                marginRight: '15px',
+                marginBottom: '15px'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 6px 20px rgba(24, 90, 219, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = '0 4px 15px rgba(24, 90, 219, 0.3)';
+              }}
             >
               📄 Download CV
             </a>
             <a 
-              href="#projects" 
-              className="inline-block border-1 border-white text-white hover:bg-primary-900 hover:text-primary-900 px-6 py-3 rounded-lg text-lg font-medium transition-all"
+              href="#projects"
+              style={{
+                display: 'inline-block',
+                padding: '12px 30px',
+                background: 'transparent',
+                color: '#4a9eff',
+                border: '2px solid #4a9eff',
+                borderRadius: '8px',
+                fontSize: '1rem',
+                fontWeight: '600',
+                textDecoration: 'none',
+                transition: 'all 0.3s ease',
+                marginBottom: '15px'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = '#4a9eff';
+                e.target.style.color = '#fff';
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 6px 20px rgba(74, 158, 255, 0.4)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = 'transparent';
+                e.target.style.color = '#4a9eff';
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = 'none';
+              }}
             >
-              View My Work
+              🚀 View My Work
             </a>
           </div>
         </div>

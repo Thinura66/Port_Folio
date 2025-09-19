@@ -16,7 +16,15 @@ const Skills = () => (
       <div className="row">
         {/* Frontend & Frameworks */}
         <div className="col-lg-4 mb-4 scroll-animate scroll-animate-delay-1">
-          <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
+          <div className="animated-border" style={{ 
+            borderRadius: '15px',
+            backdropFilter: 'blur(30px)',
+            WebkitBackdropFilter: 'blur(30px)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            position: 'relative',
+            padding: '30px', 
+            height: '100%' 
+          }}>
             <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Frontend & Frameworks</h4>
             <div className="row text-center">
               <div className="col-6 mb-4">
@@ -67,7 +75,15 @@ const Skills = () => (
 
         {/* Backend & Databases */}
         <div className="col-lg-4 mb-4 scroll-animate scroll-animate-delay-2">
-          <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
+          <div className="animated-border" style={{ 
+            borderRadius: '15px',
+            backdropFilter: 'blur(30px)',
+            WebkitBackdropFilter: 'blur(30px)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            position: 'relative',
+            padding: '30px', 
+            height: '100%' 
+          }}>
             <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Backend & Databases</h4>
             <div className="row text-center">
               <div className="col-6 mb-4">
@@ -118,7 +134,15 @@ const Skills = () => (
 
         {/* Tools & Others */}
         <div className="col-lg-4 mb-4 scroll-animate scroll-animate-delay-3">
-          <div style={{ background: '#1a1a1a', padding: '30px', borderRadius: '10px', height: '100%', border: '2px solid #185adb' }}>
+          <div className="animated-border" style={{ 
+            borderRadius: '15px',
+            backdropFilter: 'blur(30px)',
+            WebkitBackdropFilter: 'blur(30px)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            position: 'relative',
+            padding: '30px', 
+            height: '100%' 
+          }}>
             <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Tools & Others</h4>
             <div className="row text-center">
               <div className="col-6 mb-4">

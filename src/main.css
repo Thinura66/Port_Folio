@@ -14,9 +14,7 @@ body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
   color: #fff;
-  background: linear-gradient(-45deg, #0a1931, #142849, #1a1a1a, #0f1419, #113760, #0d1b2a);
-  background-size: 600% 600%;
-  animation: gradientShift 35s ease infinite;
+  background: #000000;
   scroll-behavior: smooth;
   overflow-x: hidden;
   overflow-y: auto;
@@ -26,38 +24,107 @@ body {
   padding: 0;
 }
 
-body::before {
-  content: '';
+/* Flowing Blue Lines Background Container */
+.flowing-lines-bg {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(-45deg, 
-    rgba(10, 25, 49, 0.9), 
-    rgba(20, 40, 73, 0.8), 
-    rgba(26, 26, 26, 0.9), 
-    rgba(15, 20, 25, 0.9),
-    rgba(17, 55, 96, 0.7),
-    rgba(13, 27, 42, 0.8)
-  );
-  background-size: 600% 600%;
-  animation: gradientShift 45s ease infinite;
-  z-index: -2;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
 }
 
-body::after {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(74,158,255,0.2)"><animate attributeName="cy" values="20;80;20" dur="6s" repeatCount="indefinite"/></circle><circle cx="50" cy="50" r="1" fill="rgba(24,90,219,0.25)"><animate attributeName="cy" values="50;10;50" dur="8s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1.5" fill="rgba(74,158,255,0.15)"><animate attributeName="cy" values="30;90;30" dur="10s" repeatCount="indefinite"/></circle></svg>') repeat;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.3;
+.blue-line {
+  position: absolute;
+  background: #00aaff;
+  opacity: 0.15;
+  box-shadow: 0 0 5px rgba(0, 170, 255, 0.15), 0 0 10px rgba(0, 170, 255, 0.1);
+  border-radius: 1px;
+}
+
+/* Horizontal Lines */
+.blue-line.horizontal {
+  height: 2px;
+  width: 300px;
+}
+
+.blue-line.horizontal.line-1 {
+  top: 15%;
+  left: -300px;
+  background: #00aaff;
+  animation: flowRight 6s linear infinite;
+}
+
+.blue-line.horizontal.line-2 {
+  top: 35%;
+  left: -300px;
+  background: #0077cc;
+  animation: flowRight 8s linear infinite 1.5s;
+}
+
+.blue-line.horizontal.line-3 {
+  top: 60%;
+  left: -300px;
+  background: #3399ff;
+  animation: flowRight 7s linear infinite 3s;
+}
+
+.blue-line.horizontal.line-4 {
+  top: 85%;
+  left: -300px;
+  background: #0099ff;
+  animation: flowRight 9s linear infinite 0.5s;
+}
+
+/* Vertical Lines */
+.blue-line.vertical {
+  width: 2px;
+  height: 250px;
+}
+
+.blue-line.vertical.line-5 {
+  left: 20%;
+  top: -250px;
+  background: #0066ff;
+  animation: flowDown 5s linear infinite;
+}
+
+.blue-line.vertical.line-6 {
+  left: 50%;
+  top: -250px;
+  background: #0088ff;
+  animation: flowDown 7s linear infinite 2s;
+}
+
+.blue-line.vertical.line-7 {
+  left: 80%;
+  top: -250px;
+  background: #00bbff;
+  animation: flowDown 6s linear infinite 4s;
+}
+
+/* Diagonal Lines */
+.blue-line.diagonal {
+  width: 350px;
+  height: 2px;
+}
+
+.blue-line.diagonal.line-8 {
+  top: 25%;
+  left: -350px;
+  transform: rotate(45deg);
+  background: #0088ff;
+  animation: flowDiagonalRight 10s linear infinite;
+}
+
+.blue-line.diagonal.line-9 {
+  top: 70%;
+  right: -350px;
+  transform: rotate(-45deg);
+  background: #00ccff;
+  animation: flowDiagonalLeft 12s linear infinite 3s;
 }
 
 html {
@@ -456,21 +523,72 @@ button:hover {
   }
 }
 
-@keyframes gradientShift {
+/* Flowing Blue Lines Animations */
+@keyframes flowRight {
   0% {
-    background-position: 0% 50%;
+    left: -300px;
+    opacity: 0;
   }
-  25% {
-    background-position: 100% 25%;
+  5% {
+    opacity: 0.15;
   }
-  50% {
-    background-position: 75% 100%;
-  }
-  75% {
-    background-position: 25% 75%;
+  95% {
+    opacity: 0.15;
   }
   100% {
-    background-position: 0% 50%;
+    left: calc(100vw + 100px);
+    opacity: 0;
+  }
+}
+
+@keyframes flowDown {
+  0% {
+    top: -250px;
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.15;
+  }
+  95% {
+    opacity: 0.15;
+  }
+  100% {
+    top: calc(100vh + 100px);
+    opacity: 0;
+  }
+}
+
+@keyframes flowDiagonalRight {
+  0% {
+    left: -350px;
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.15;
+  }
+  95% {
+    opacity: 0.15;
+  }
+  100% {
+    left: calc(100vw + 100px);
+    opacity: 0;
+  }
+}
+
+@keyframes flowDiagonalLeft {
+  0% {
+    right: -350px;
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.15;
+  }
+  95% {
+    opacity: 0.15;
+  }
+  100% {
+    right: calc(100vw + 100px);
+    opacity: 0;
   }
 }
 
@@ -922,6 +1040,7 @@ section {
   background: transparent !important;
   scroll-margin-top: 60px;
   position: relative;
+  z-index: 2;
 }
 
 /* Section overlays for subtle color variations */
@@ -1090,42 +1209,6 @@ footer .social-icon {
 footer .social-icon:hover {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* New Animated Background Styles */
-.animated-background-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: -10;
-  overflow: hidden;
-}
-
-.main-animated-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #0a1931, #185adb, #2c5aa0, #0a1931);
-  background-size: 400% 400%;
-  animation: gradientFlow 15s ease infinite;
-  opacity: 0.2;
-}
-
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 /* Tech Icons Floating Animation */
@@ -1425,4 +1508,60 @@ footer .social-icon:hover {
   background: rgba(239, 68, 68, 0.1);
   border: 1px solid #ef4444;
   color: #ef4444;
+}
+
+/* Animated Blue Border Effect */
+.animated-border {
+  position: relative;
+  background: #050b1c;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #00aaff,
+    #4a9eff,
+    #66d9ff,
+    #00aaff,
+    transparent,
+    transparent
+  );
+  animation: rotateBorder 6s linear infinite;
+  z-index: 1;
+}
+
+.animated-border::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  background: #050b1c;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.animated-border > * {
+  position: relative;
+  z-index: 3;
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -133,7 +133,14 @@ const Contact = () => {
         <div className="row">
           {/* Contact Information */}
           <div className="col-lg-4 mb-5 scroll-animate-left">
-            <div style={{ padding: '40px 35px', background: 'rgba(255,255,255,0.1)', borderRadius: '15px' }}>
+            <div className="animated-border" style={{ 
+              padding: '40px 35px', 
+              background: '#050b1c',
+              borderRadius: '15px',
+              backdropFilter: 'blur(30px)',
+              WebkitBackdropFilter: 'blur(30px)',
+              position: 'relative'
+            }}>
               <h3 style={{ color: '#fff', marginBottom: '35px', fontSize: '1.5rem' }}>Contact Information</h3>
               
               <div style={{ marginBottom: '30px' }}>
@@ -308,11 +315,12 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="col-lg-8 scroll-animate-right">
-            <div style={{ 
+            <div className="animated-border" style={{ 
               padding: '35px', 
-              background: 'rgba(255,255,255,0.1)', 
+              background: '#050b1c',
               borderRadius: '15px',
-              backdropFilter: 'blur(10px)',
+              backdropFilter: 'blur(30px)',
+              WebkitBackdropFilter: 'blur(30px)',
               position: 'relative'
             }}>
               <h3 style={{ color: '#fff', marginBottom: '30px', fontSize: '1.8rem' }}>Send Me A Message</h3>
