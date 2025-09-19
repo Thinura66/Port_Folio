@@ -81,7 +81,7 @@ const Projects = () => {
       <div className="row">
         
 
-        {/* Project 2 */}
+        {/* Project 1 */}
         <div className="col-lg-4 col-md-6 mb-4 scroll-animate scroll-animate-delay-2">
           <div style={{ 
             background: '#1a1a1a', 
@@ -155,19 +155,27 @@ const Projects = () => {
                   fontSize: '0.8rem'
                 }}>MySQL</span>
               </div>
-              <div style={{ display: 'flex', gap: '10px' }}>
+              <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                 <a href="https://github.com/Thinura66/PointEdge-Frontend" style={{ 
                   color: '#4a9eff', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
-                  fontWeight: '500'
-                }}>GitHub</a>
+                  fontWeight: '500',
+                  transition: 'all 0.3s ease'
+                }}>GitHub Frontend</a>
+                <a href="https://github.com/Thinura66/PointEdge-Backend" style={{ 
+                  color: '#4a9eff', 
+                  textDecoration: 'none', 
+                  fontSize: '0.9rem',
+                  fontWeight: '500',
+                  transition: 'all 0.3s ease'
+                }}>GitHub Backend</a>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Project 3 */}
+        {/* Project 2 */}
         <div className="col-lg-4 col-md-6 mb-4 scroll-animate scroll-animate-delay-3">
           <div style={{ 
             background: '#1a1a1a', 
@@ -282,12 +290,6 @@ const Projects = () => {
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
                   fontWeight: '500'
-                }}>Live Demo</a>
-                <a href="#" style={{ 
-                  color: '#4a9eff', 
-                  textDecoration: 'none', 
-                  fontSize: '0.9rem',
-                  fontWeight: '500'
                 }}>GitHub</a>
               </div>
             </div>
@@ -354,12 +356,13 @@ const Projects = () => {
                   fontSize: '0.8rem'
                 }}>EmailJS</span>
               </div>
-              <div style={{ display: 'flex', gap: '10px' }}>
+              <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                 <a href="https://github.com/Thinura66/Port_Folio" target="_blank" rel="noopener noreferrer" style={{ 
                   color: '#4a9eff', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
-                  fontWeight: '500'
+                  fontWeight: '500',
+                  transition: 'all 0.3s ease'
                 }}>GitHub</a>
               </div>
             </div>
