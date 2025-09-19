@@ -95,7 +95,9 @@ const Home = () => {
                 fontWeight: '600',
                 textDecoration: 'none',
                 transition: 'all 0.3s ease',
-                marginBottom: '15px'
+                marginBottom: '15px',
+                minWidth: '162px',
+                textAlign: 'center'
               }}
               onMouseEnter={(e) => {
                 e.target.style.background = '#4a9eff';
