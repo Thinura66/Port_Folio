@@ -494,15 +494,15 @@ section:nth-child(6) { animation-delay: 0.6s; }
     font-size: 1rem !important;
   }
 
-  /* Mobile social icons - improved selectors and visibility */
-  a[href*="linkedin"], 
-  a[href*="github"], 
-  a[href*="instagram"], 
-  a[href*="facebook"],
-  a[href*="LinkedIn"],
-  a[href*="GitHub"],
-  a[href*="Instagram"],
-  a[href*="Facebook"] {
+  /* Mobile social icons - improved selectors and visibility - ONLY for contact section */
+  #contact a[href*="linkedin"], 
+  #contact a[href*="github"], 
+  #contact a[href*="instagram"], 
+  #contact a[href*="facebook"],
+  #contact a[href*="LinkedIn"],
+  #contact a[href*="GitHub"],
+  #contact a[href*="Instagram"],
+  #contact a[href*="Facebook"] {
     width: 2.5rem !important;
     height: 2.5rem !important;
     min-width: 2.5rem !important;
@@ -518,17 +518,35 @@ section:nth-child(6) { animation-delay: 0.6s; }
     flex-shrink: 0 !important;
   }
 
-  /* Ensure social media images are visible */
-  a[href*="linkedin"] img, 
-  a[href*="github"] img, 
-  a[href*="instagram"] img, 
-  a[href*="facebook"] img {
+  /* Ensure social media images are visible - ONLY for contact section */
+  #contact a[href*="linkedin"] img, 
+  #contact a[href*="github"] img, 
+  #contact a[href*="instagram"] img, 
+  #contact a[href*="facebook"] img {
     width: 100% !important;
     height: 100% !important;
     object-fit: contain !important;
     display: block !important;
     opacity: 1 !important;
     visibility: visible !important;
+  }
+
+  /* Ensure project GitHub links remain as normal text links */
+  #projects a[href*="github"],
+  #projects a[href*="GitHub"] {
+    width: auto !important;
+    height: auto !important;
+    min-width: auto !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    display: inline !important;
+    align-items: initial !important;
+    justify-content: initial !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    padding: 0 !important;
+    box-sizing: content-box !important;
+    flex-shrink: initial !important;
   }
 
   /* Follow Me section mobile styling */
