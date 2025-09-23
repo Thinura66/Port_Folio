@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Skills = () => (
-  <section id="skills" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #151515 0%, #0e1117 50%, #121212 100%)' }}>
-    <div className="container">
+  <section id="skills" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #151515 0%, #0e1117 50%, #121212 100%)', width: '100vw', maxWidth: '100vw', overflowX: 'hidden' }}>
+    <div className="w-full px-4 md:px-8" style={{ width: '100%' }}>
       <div className="text-center mb-5 scroll-animate">
         <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
           My Skills
@@ -64,9 +64,9 @@ const Skills = () => (
               </div>
               <div className="col-6 mb-4">
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://avatars.githubusercontent.com/u/54212428?s=200&v=4" 
-                       alt="Chakra UI" style={{ width: '50px', height: '50px', marginBottom: '10px', borderRadius: '8px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Chakra UI</span>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" 
+                       alt="DotNet" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>DotNet</span>
                 </div>
               </div>
             </div>
@@ -116,9 +116,9 @@ const Skills = () => (
               </div>
               <div className="col-6 mb-4">
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" 
-                       alt="MongoDB" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>MongoDB</span>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" 
+                       alt="PostgreSQL" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
+                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>PostgreSQL</span>
                 </div>
               </div>
               <div className="col-6 mb-4">

@@ -117,9 +117,12 @@ const Contact = () => {
     <section id="contact" style={{ 
       padding: '80px 0', 
       background: 'linear-gradient(180deg, #151515 0%, #0a1931 30%, #185adb 100%)',
-      position: 'relative'
+      position: 'relative',
+      width: '100vw',
+      maxWidth: '100vw',
+      overflowX: 'hidden'
     }}>
-      <div className="container">
+      <div className="w-full px-4 md:px-8" style={{ width: '100%' }}>
         <div className="text-center mb-5 scroll-animate">
           <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
             Get In Touch
@@ -130,9 +133,9 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="row">
+        <div className="row" style={{ margin: '0', padding: '0 0.5rem' }}>
           {/* Contact Information */}
-          <div className="col-lg-4 mb-5 scroll-animate-left">
+          <div className="col-lg-4 mb-5 scroll-animate-left" style={{ padding: '0.5rem' }}>
             <div className="animated-border" style={{ 
               padding: '40px 35px', 
               background: '#050b1c',
@@ -208,7 +211,13 @@ const Contact = () => {
 
               <div style={{ marginTop: '30px' }}>
                 <h4 style={{ color: '#fff', marginBottom: '20px' }}>Follow Me</h4>
-                <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+                <div style={{ 
+                  display: 'flex', 
+                  gap: '15px', 
+                  flexWrap: 'wrap', 
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}>
                   {/* LinkedIn */}
                   <a href="https://linkedin.com/in/thinura-kahaduwa" target="_blank" rel="noopener noreferrer" style={{ 
                     width: '50px', 
@@ -314,7 +323,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="col-lg-8 scroll-animate-right">
+          <div className="col-lg-8 scroll-animate-right" style={{ padding: '0.5rem' }}>
             <div className="animated-border" style={{ 
               padding: '35px', 
               background: '#050b1c',

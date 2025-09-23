@@ -66,8 +66,8 @@ const Projects = () => {
   }, [project3Images.length]);
 
   return (
-  <section id="projects" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #121212 0%, #0c0f14 50%, #151515 100%)' }}>
-    <div className="container">
+  <section id="projects" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #121212 0%, #0c0f14 50%, #151515 100%)', width: '100vw', maxWidth: '100vw', overflowX: 'hidden' }}>
+    <div className="w-full px-4 md:px-8" style={{ width: '100%' }}>
       <div className="text-center mb-5 scroll-animate">
         <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
           My Projects

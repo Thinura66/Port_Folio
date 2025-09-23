@@ -4,10 +4,10 @@ const About = () => (
   <section 
     id="about" 
     className="py-8 md:py-20 px-4 md:px-8"
-    style={{ background: 'linear-gradient(180deg, #1a1a1a 0%, #0f1419 50%, #151515 100%)' }}
+    style={{ background: 'linear-gradient(180deg, #1a1a1a 0%, #0f1419 50%, #151515 100%)', width: '100vw', maxWidth: '100vw', overflowX: 'hidden' }}
   >
-    <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6 lg:gap-12">
+    <div className="w-full mx-auto">
+      <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-6 lg:gap-12 px-2 sm:px-4">
         {/* Text Content */}
         <div className="flex-1 text-center lg:text-left lg:pr-8">
           <div className="mb-6 lg:mb-8 scroll-animate">

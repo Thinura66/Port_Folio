@@ -2,11 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>ThinuraSK - Portfolio</title>
     <meta name="description" content="Thinura Kahaduwa's professional portfolio - Full Stack Developer & Software Engineer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical mobile CSS -->
+    <style>
+      /* Immediate mobile fixes */
+      * {
+        box-sizing: border-box !important;
+      }
+      
+      html, body {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      
+      /* Mobile-first container */
+      #root {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>

@@ -189,23 +189,384 @@ section:nth-child(6) { animation-delay: 0.6s; }
   }
 }
 
-/* Mobile responsive section spacing */
+/* Enhanced Mobile-First Responsive Design */
 @media (max-width: 768px) {
+  /* Ensure full mobile viewport usage */
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Mobile container constraints - less restrictive */
+  .w-full, 
   section {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* Mobile padding optimization - more flexible */
+  section {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
   
-  /* Specific spacing for Home section */
+  /* Specific spacing for Home section on mobile */
   section#home {
     padding-bottom: 0.25rem !important;
     padding-top: 4rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   
-  /* Specific spacing for About section */
+  /* Specific spacing for About section on mobile */
   section#about {
     padding-top: 0.25rem !important;
     padding-bottom: 0.5rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  /* Specific spacing for Skills section on mobile */
+  section#skills {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* Specific spacing for Projects section on mobile */
+  section#projects {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* Specific spacing for Contact section on mobile - make wider */
+  section#contact {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  section#contact .w-full {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+
+  /* Apply reduced padding to all section containers */
+  section .w-full,
+  section .container {
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+  }
+
+  /* Mobile navbar optimization */
+  nav {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    min-height: 40px !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+  }
+  
+  nav .max-w-none {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Reduce navbar thickness on mobile and hide extra elements */
+  nav .container div:last-child {
+    display: none; 
+  }
+
+  /* Mobile text scaling */
+  h1 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  h2 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  h3 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+
+  p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Mobile button improvements */
+  .btn, 
+  button,
+  a[style*="padding"] {
+    padding: 12px 24px !important;
+    font-size: 0.9rem !important;
+    margin: 0.5rem 0.25rem !important;
+    min-height: 44px !important; /* Touch-friendly size */
+    display: inline-block !important;
+    text-align: center !important;
+  }
+
+  /* Mobile card and button optimization - Uniform box sizing like "What I Do" */
+  .animated-border {
+    margin-left: 0.1rem !important;
+    margin-right: 0.1rem !important;
+    max-width: calc(100% - 0.2rem) !important;
+    width: auto !important;
+  }
+
+  /* Ensure ALL sections use consistent box sizing */
+  #about .animated-border,
+  #skills .animated-border, 
+  #projects .animated-border {
+    margin-left: 0.1rem !important;
+    margin-right: 0.1rem !important;
+    max-width: calc(100% - 0.2rem) !important;
+    width: auto !important;
+  }
+
+  /* Force consistency for any card-like elements */
+  .card, .card-body, 
+  div[style*="borderRadius"],
+  div[style*="border-radius"] {
+    margin-left: 0.1rem !important;
+    margin-right: 0.1rem !important;
+    max-width: calc(100% - 0.2rem) !important;
+    width: auto !important;
+  }
+
+  .btn,
+  button {
+    margin-left: 0.1rem !important;
+    margin-right: 0.1rem !important;
+    max-width: calc(100% - 0.2rem) !important;
+  }
+
+  /* Mobile image constraints */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Profile photo - maintain circular aspect ratio on mobile */
+  img[alt="Thinura Kahaduwa"] {
+    width: 12rem !important; /* w-48 equivalent */
+    height: 12rem !important; /* h-48 equivalent */
+    min-width: 12rem !important;
+    min-height: 12rem !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1/1 !important;
+    object-fit: cover !important;
+    border: 4px solid white !important;
+  }
+
+  /* Smaller profile photo for very small screens */
+  @media (max-width: 480px) {
+    img[alt="Thinura Kahaduwa"] {
+      width: 10rem !important;
+      height: 10rem !important;
+      min-width: 10rem !important;
+      min-height: 10rem !important;
+    }
+  }
+
+  /* Bootstrap column fixes for mobile - more flexible */
+  .row {
+    margin-left: -0.1rem !important;
+    margin-right: -0.1rem !important;
+  }
+
+  .col-lg-4, .col-lg-8, .col-md-6 {
+    padding-left: 0.1rem !important;
+    padding-right: 0.1rem !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Contact section specific mobile fixes */
+  #contact .row {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #contact .col-lg-4,
+  #contact .col-lg-8 {
+    padding: 0.25rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* Contact Information Card and Message Form Mobile Optimization - Make wider */
+  #contact .animated-border {
+    padding: 1.5rem 1rem !important;
+    margin-left: 0.1rem !important;
+    margin-right: 0.1rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 1.5rem !important;
+    width: auto !important;
+    max-width: calc(100% - 0.2rem) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Contact Information Items */
+  #contact h3 {
+    font-size: 1.3rem !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+  }
+
+  /* Contact Info Item Layout */
+  #contact div[style*="display: flex"][style*="alignItems: center"] {
+    display: flex !important;
+    align-items: flex-start !important;
+    margin-bottom: 1rem !important;
+    padding: 0.5rem !important;
+  }
+
+  /* Contact Icon Circles */
+  #contact div[style*="width: 50px"] {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+    min-height: 40px !important;
+    margin-right: 1rem !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Contact Text */
+  #contact h4 {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.25rem !important;
+    line-height: 1.2 !important;
+  }
+
+  #contact p {
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+
+  /* Mobile content optimization */
+  .text-center {
+    text-align: center !important;
+  }
+
+  .flex-col {
+    align-items: center !important;
+  }
+
+  /* Mobile form improvements */
+  input, textarea, select {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 0.75rem !important;
+    margin-bottom: 1rem !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Contact section form elements - ensure full width usage */
+  #contact input, 
+  #contact textarea {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.875rem !important;
+    font-size: 1rem !important;
+  }
+
+  /* Mobile social icons - improved selectors and visibility */
+  a[href*="linkedin"], 
+  a[href*="github"], 
+  a[href*="instagram"], 
+  a[href*="facebook"],
+  a[href*="LinkedIn"],
+  a[href*="GitHub"],
+  a[href*="Instagram"],
+  a[href*="Facebook"] {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    min-width: 2.5rem !important;
+    min-height: 2.5rem !important;
+    margin: 0.25rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    background: #fff !important;
+    padding: 0.4rem !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Ensure social media images are visible */
+  a[href*="linkedin"] img, 
+  a[href*="github"] img, 
+  a[href*="instagram"] img, 
+  a[href*="facebook"] img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Follow Me section mobile styling */
+  #contact div[style*="justifyContent: 'center'"] {
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    padding: 1rem 0 !important;
+  }
+
+  /* Follow Me heading */
+  #contact h4:last-of-type {
+    text-align: center !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Ensure proper mobile scrolling */
+  body {
+    -webkit-overflow-scrolling: touch !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Additional mobile fixes for Contact section */
+  .text-center h2 {
+    font-size: 2rem !important;
+    padding: 0 1rem !important;
+  }
+
+  /* Mobile flexbox improvements */
+  div[style*="display: flex"] {
+    flex-wrap: wrap !important;
+  }
+
+  /* Mobile gap fixes */
+  div[style*="gap: 15px"] {
+    gap: 0.75rem !important;
   }
 }
 
@@ -213,6 +574,19 @@ section:nth-child(6) { animation-delay: 0.6s; }
   section {
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
+  }
+  
+  /* Desktop profile photo positioning - center it better */
+  .lg\\:justify-center img[alt="Thinura Kahaduwa"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  /* Ensure proper centering for the profile photo container */
+  #home .flex-1:last-child {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 }
 

@@ -19,9 +19,10 @@ const Home = () => {
   return (
   <section
     id="home"
-    className="w-full min-h-screen pt-20 md:pt-24 pb-4 md:pb-8 px-4 md:px-8 lg:px-24 flex items-center justify-center overflow-hidden"
+    className="w-full min-h-screen pt-20 md:pt-24 pb-4 md:pb-8 px-4 md:px-8 lg:px-24 flex items-center justify-center"
+    style={{ width: '100vw', maxWidth: '100vw', overflowX: 'hidden' }}
   >
-    <div className="max-w-7xl mx-auto w-full">
+    <div className="w-full mx-auto">
       <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 lg:gap-12">
         {/* Text Content */}
         <div className="text-white text-center lg:text-left flex-1 lg:pr-8">
@@ -34,11 +35,14 @@ const Home = () => {
           
           {/* Profile Image - Mobile Only (appears after name) */}
           <div className="flex justify-center lg:hidden mb-6">
-            <img 
-              src={profileImg} 
-              alt="Thinura Kahaduwa" 
-              className={`w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-full border-6 border-white shadow-2xl ${isLoaded ? 'animate-zoom-in animate-delay-2 floating' : 'animate-on-load'}`}
-            />
+            <div className="relative">
+              <img 
+                src={profileImg} 
+                alt="Thinura Kahaduwa" 
+                className={`w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-full border-4 border-white shadow-2xl ${isLoaded ? 'animate-zoom-in animate-delay-2 floating' : 'animate-on-load'}`}
+                style={{ aspectRatio: '1/1', minWidth: '12rem', minHeight: '12rem' }}
+              />
+            </div>
           </div>
           
           <h2 
@@ -47,7 +51,7 @@ const Home = () => {
             3rd year undergraduate
           </h2>
 
-          <p className={`text-base sm:text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed text-blue-100 max-w-2xl mx-auto lg:mx-0 ${isLoaded ? 'animate-fade-in-up animate-delay-2' : 'animate-on-load'}`}>
+          <p className={`text-base sm:text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed text-blue-100 max-w-2xl mx-auto lg:mx-0 px-2 sm:px-0 ${isLoaded ? 'animate-fade-in-up animate-delay-2' : 'animate-on-load'}`}>
             I am a 3rd year undergraduate at the University of Moratuwa, passionate about software engineering and modern web development. 
             I enjoy building innovative, user-friendly solutions and turning creative ideas into functional applications.
           </p>
@@ -118,7 +122,7 @@ const Home = () => {
         </div>
         
         {/* Profile Image - Desktop Only */}
-        <div className="hidden lg:flex flex-1 justify-center lg:justify-end">
+        <div className="hidden lg:flex flex-1 justify-center">
           <img 
             src={profileImg} 
             alt="Thinura Kahaduwa" 
