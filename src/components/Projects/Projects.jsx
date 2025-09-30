@@ -289,7 +289,7 @@ const Projects = () => {
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '10px' }}>
-                <a href="#" style={{ 
+                <a href="https://github.com/Thinura66/Solo-Runner" target="_blank" rel="noopener noreferrer" style={{ 
                   color: '#4a9eff', 
                   textDecoration: 'none', 
                   fontSize: '0.9rem',
