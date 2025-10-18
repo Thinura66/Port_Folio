@@ -27,8 +27,8 @@ const Home = () => {
         {/* Text Content */}
         <div className="text-white text-center lg:text-left flex-1 lg:pr-8">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6">
-            <div className={`mb-2 ${isLoaded ? 'animate-fade-in-left' : 'animate-on-load'}`}>Hi, I'm</div>
-            <div className={`text-white ${isLoaded ? 'animate-fade-in-right animate-delay-1' : 'animate-on-load'}`}>
+            <div className={`mb-2 ${isLoaded ? 'animate-drop-from-top' : 'animate-on-load'}`}>Hi, I'm</div>
+            <div className={`text-white ${isLoaded ? 'animate-drop-from-top animate-delay-1' : 'animate-on-load'}`}>
               Thinura Kahaduwa
             </div>
           </h1>
@@ -39,7 +39,7 @@ const Home = () => {
               <img 
                 src={profileImg} 
                 alt="Thinura Kahaduwa" 
-                className={`w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-full border-4 border-white shadow-2xl ${isLoaded ? 'animate-zoom-in animate-delay-2 floating' : 'animate-on-load'}`}
+                className={`w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-full border-4 border-white shadow-2xl ${isLoaded ? 'animate-drop-from-top animate-delay-2 floating' : 'animate-on-load'}`}
                 style={{ aspectRatio: '1/1', minWidth: '12rem', minHeight: '12rem' }}
               />
             </div>
@@ -126,7 +126,7 @@ const Home = () => {
           <img 
             src={profileImg} 
             alt="Thinura Kahaduwa" 
-            className={`w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-full border-8 border-white shadow-2xl ${isLoaded ? 'animate-zoom-in animate-delay-2 floating' : 'animate-on-load'}`}
+            className={`w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-full border-8 border-white shadow-2xl ${isLoaded ? 'animate-drop-from-top animate-delay-2 floating' : 'animate-on-load'}`}
           />
         </div>
       </div>
