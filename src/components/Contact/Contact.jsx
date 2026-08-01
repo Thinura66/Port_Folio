@@ -4,6 +4,9 @@ import GitHubLogo from '../../assets/contact/GitHub.png';
 import LinkedInLogo from '../../assets/contact/linkedin.png';
 import InstagramLogo from '../../assets/contact/Instagram-.png';
 import FacebookLogo from '../../assets/contact/Facebook.png';
+import Card from '../ui/Card';
+import Button from '../ui/Button';
+import SectionHeading from '../ui/SectionHeading';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -114,50 +117,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" style={{ 
-      padding: '80px 0', 
-      background: 'linear-gradient(180deg, #151515 0%, #0a1931 30%, #185adb 100%)',
-      position: 'relative',
-      width: '100vw',
-      maxWidth: '100vw',
-      overflowX: 'hidden'
-    }}>
-      <div className="w-full px-4 md:px-8" style={{ width: '100%' }}>
-        <div className="text-center mb-5 scroll-animate">
-          <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
-            Get In Touch
-          </h2>
-          <div style={{ width: '60px', height: '4px', background: '#2c5aa0', margin: '0 auto 30px' }}></div>
-          <p style={{ color: '#eaf0fb', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
-          </p>
-        </div>
-        
+    <section id="contact" className="py-16 md:py-24 px-4 md:px-8 bg-gradient-to-b from-surface-900 via-surface-800 to-primary-900">
+      <SectionHeading
+        title="Get In Touch"
+        subtitle="Have a project in mind? Let's discuss how we can work together to bring your ideas to life."
+      />
+      <div className="w-full" style={{ width: '100%' }}>
         <div className="row" style={{ margin: '0', padding: '0 0.5rem' }}>
           {/* Contact Information */}
           <div className="col-lg-4 mb-5 scroll-animate-left" style={{ padding: '0.5rem' }}>
-            <div className="animated-border" style={{ 
-              padding: '40px 35px', 
-              background: '#050b1c',
-              borderRadius: '15px',
-              backdropFilter: 'blur(30px)',
-              WebkitBackdropFilter: 'blur(30px)',
-              position: 'relative'
-            }}>
+            <Card>
               <h3 style={{ color: '#fff', marginBottom: '35px', fontSize: '1.5rem' }}>Contact Information</h3>
-              
+
               <div style={{ marginBottom: '30px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-                  <div style={{ 
-                    width: '50px', 
-                    height: '50px', 
-                    background: '#4a9eff', 
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginRight: '15px'
-                  }}>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-primary-400">
                     <span style={{ color: '#0a1931', fontSize: '1.2rem', fontWeight: 'bold' }}>📧</span>
                   </div>
                   <div>
@@ -169,16 +143,7 @@ const Contact = () => {
 
               <div style={{ marginBottom: '30px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-                  <div style={{ 
-                    width: '50px', 
-                    height: '50px', 
-                    background: '#4a9eff', 
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginRight: '15px'
-                  }}>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-primary-400">
                     <span style={{ color: '#0a1931', fontSize: '1.2rem', fontWeight: 'bold' }}>📱</span>
                   </div>
                   <div>
@@ -190,16 +155,7 @@ const Contact = () => {
 
               <div style={{ marginBottom: '30px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-                  <div style={{ 
-                    width: '50px', 
-                    height: '50px', 
-                    background: '#4a9eff', 
-                    borderRadius: '50%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginRight: '15px'
-                  }}>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-primary-400">
                     <span style={{ color: '#0a1931', fontSize: '1.2rem', fontWeight: 'bold' }}>📍</span>
                   </div>
                   <div>
@@ -319,19 +275,12 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </Card>
           </div>
 
           {/* Contact Form */}
           <div className="col-lg-8 scroll-animate-right" style={{ padding: '0.5rem' }}>
-            <div className="animated-border" style={{ 
-              padding: '35px', 
-              background: '#050b1c',
-              borderRadius: '15px',
-              backdropFilter: 'blur(30px)',
-              WebkitBackdropFilter: 'blur(30px)',
-              position: 'relative'
-            }}>
+            <Card>
               <h3 style={{ color: '#fff', marginBottom: '30px', fontSize: '1.8rem' }}>Send Me A Message</h3>
               
               {/* Custom Message Popup */}
@@ -460,55 +409,11 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 
-                <button
-                  type="submit"
-                  style={{
-                    background: '#4a9eff',
-                    color: '#0a1931',
-                    border: 'none',
-                    padding: '13px 30px',
-                    borderRadius: '10px',
-                    fontSize: '1.1rem',
-                    fontWeight: '600',
-                    cursor: 'pointer',
-                    transition: 'transform 0.3s ease',
-                    outline: 'none'
-                  }}
-                  onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'}
-                  onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}
-                  disabled={isLoading}
-                >
+                <Button as="button" type="submit" variant="primary" disabled={isLoading} className="border-none cursor-pointer">
                   {isLoading ? 'Sending...' : 'Send Message'}
-                </button>
+                </Button>
               </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      {/* Footer integrated within Contact section */}
-      <div style={{
-        marginTop: '60px',
-        paddingTop: '30px',
-        borderTop: '2px solid rgba(255,255,255,0.1)'
-      }}>
-        <div className="container">
-          <div style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            padding: '0 20px'
-          }}>
-            <p style={{
-              color: '#ffffff',
-              fontSize: '16px',
-              margin: '0',
-              fontWeight: '400',
-              letterSpacing: '0.5px'
-            }}>
-              &copy; {new Date().getFullYear()} Thinura Kahaduwa. All rights reserved.
-            </p>
+            </Card>
           </div>
         </div>
       </div>
