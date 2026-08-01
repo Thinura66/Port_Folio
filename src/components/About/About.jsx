@@ -20,12 +20,12 @@ const About = () => (
           
           <div className="scroll-animate-left">
             <p className="text-blue-100 text-base md:text-lg lg:text-xl leading-relaxed mb-4 lg:mb-6">
-               As a 3rd year undergraduate at the University of Moratuwa, I am driven to grow into a versatile software engineer. 
-               I have a strong interest in designing efficient systems, exploring modern web technologies, and developing solutions that combine functionality with great user experience.
+               I'm an AI-focused IT undergraduate with production internship experience on a multi-tenant document digitization platform: LLM-driven information extraction,
+               OCR pipelines, and embedding-based entity resolution in Python and FastAPI.
             </p>
             <p className="text-blue-100 text-base md:text-lg lg:text-xl leading-relaxed mb-6 lg:mb-8">
-                When I'm not coding, you can find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the developer community.
+                I'm comfortable owning a feature end to end &mdash; data model, migrations, async pipeline steps, performance profiling, and testing &mdash;
+                and I'm now seeking an Associate AI Engineer role applying AI and NLP to real, messy data.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 lg:mb-8">
               <div>
@@ -54,21 +54,21 @@ const About = () => (
             <h4 className="text-white text-xl md:text-2xl mb-6">What I Do</h4>
             <div className="space-y-6">
               <div>
-                <h5 className="text-primary-400 text-lg md:text-xl mb-3">🌐 Web Development</h5>
+                <h5 className="text-primary-400 text-lg md:text-xl mb-3">🧠 LLM Information Extraction</h5>
                 <p className="text-blue-100 text-sm md:text-base">
-                  Full-stack web development using React, Node.js, and modern frameworks.
+                  Building LLM-driven pipelines to extract structured information from unstructured, messy documents.
                 </p>
               </div>
               <div>
-                <h5 className="text-primary-400 text-lg md:text-xl mb-3">📱 Mobile Development</h5>
+                <h5 className="text-primary-400 text-lg md:text-xl mb-3">🔍 OCR & Entity Resolution</h5>
                 <p className="text-blue-100 text-sm md:text-base">
-                  Cross-platform mobile apps using React Native and Flutter.
+                  Designing OCR pipelines and embedding-based entity resolution for multi-tenant document platforms.
                 </p>
               </div>
               <div>
-                <h5 className="text-primary-400 text-lg md:text-xl mb-3">☁️ Cloud Solutions</h5>
+                <h5 className="text-primary-400 text-lg md:text-xl mb-3">⚙️ End-to-End Feature Ownership</h5>
                 <p className="text-blue-100 text-sm md:text-base">
-                  Designing and implementing scalable cloud architecture on Microsoft Azure using modern deployment practices.
+                  Owning features from data model and migrations through async pipeline steps, profiling, and testing in Python and FastAPI.
                 </p>
               </div>
             </div>

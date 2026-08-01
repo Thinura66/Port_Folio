@@ -49,12 +49,12 @@ const Home = () => {
           <h2 
             className={`text-xl sm:text-2xl lg:text-3xl mb-4 lg:mb-6 text-blue-200 ${isLoaded ? 'animate-fade-in-up animate-delay-1' : 'animate-on-load'}`}
           >
-            3rd year undergraduate
+            AI-Focused IT Undergraduate
           </h2>
 
           <p className={`text-base sm:text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed text-blue-100 max-w-2xl mx-auto lg:mx-0 px-2 sm:px-0 ${isLoaded ? 'animate-fade-in-up animate-delay-2' : 'animate-on-load'}`}>
-            I am a 3rd year undergraduate at the University of Moratuwa, passionate about software engineering and modern web development. 
-            I enjoy building innovative, user-friendly solutions and turning creative ideas into functional applications.
+            I bring production internship experience on a multi-tenant document digitization platform, working with LLM-driven information extraction,
+            OCR pipelines, and embedding-based entity resolution in Python and FastAPI. I'm seeking an Associate AI Engineer role applying AI and NLP to real, messy data.
           </p>
           
           <div className={`mb-6 lg:mb-8 flex flex-wrap gap-4 justify-center lg:justify-start ${isLoaded ? 'animate-fade-in-up animate-delay-3' : 'animate-on-load'}`}>

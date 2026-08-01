@@ -75,8 +75,54 @@ const Projects = () => {
       subtitle="Here are some of the projects I've worked on. Each project showcases different technologies and skills."
     />
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <div className="w-full">
+        {/* GeneXtract Internship - most recent, full-width feature */}
+        <Card className="scroll-animate scroll-animate-delay-1 overflow-hidden !p-0 mb-6">
+            <div style={{
+              height: '80px',
+              background: 'linear-gradient(135deg, #1e3a5f 0%, #0f1419 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              paddingLeft: '1.5rem'
+            }}>
+              <span style={{ fontSize: '1.75rem', marginRight: '0.75rem' }}>📜</span>
+              <div>
+                <h3 style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 'bold', margin: 0 }}>GeneXtract</h3>
+                <span style={{ color: '#8fb8e8', fontSize: '0.85rem' }}>AI Engineering Intern · Feb 2026 – Aug 2026</span>
+              </div>
+            </div>
+            <div className="p-5 md:p-6">
+              <p style={{ color: '#eaf0fb', fontSize: '0.9rem', lineHeight: 1.5, marginBottom: '12px' }}>
+                Multi-tenant document digitization platform for historical church records (computer vision, OCR, NLP).
+              </p>
+              <ul style={{ color: '#eaf0fb', fontSize: '0.85rem', lineHeight: 1.5 }} className="list-disc pl-5 space-y-1.5 mb-4 grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-1.5">
+                <li>Turned unstructured OCR text into queryable location data with LLM-driven extraction and normalization, adding provenance-tracked confidence scores and deduplication so records could be trusted downstream.</li>
+                <li>Enabled cross-document identity linking by implementing entity resolution with 768-dimensional multilingual sentence embeddings and pgvector similarity search, surfacing duplicate person records for merge; kept the pipeline responsive by moving embedding inference off the async event loop.</li>
+                <li>Owned the parsing feature set: parent-name parser and component extraction, person-to-family relationship matching, and a date-of-birth parser overhaul with idempotent per-label notes, confidence-threshold year estimation, and vision-LLM versus OCR-text cost-reduction iterations.</li>
+                <li>Reduced manual review load by adding a per-label confidence pipeline that auto-approves high-confidence extractions and routes only uncertain ones to humans, and an OCR cleaning step that normalized raw AWS Textract output for cleaner parsing.</li>
+                <li>Closed a class of cross-tenant data-exposure risks by leading a multi-tenancy hardening pass — scoping previously unscoped repository queries by tenant and making tenant scoping mandatory on lookups project-wide.</li>
+                <li>Improved throughput on large documents by eliminating recurring N+1 query patterns (bulk existence checks, vectorized NumPy batch matching, batched commits) and fixing crashes in the person-record and embedding steps.</li>
+                <li>Migrated event, location, and family-role types from string enums to integer columns with idempotent Alembic migrations and orphaned-value mapping; added composite and fuzzy-name trigram indexes.</li>
+                <li>Cut regression risk by introducing the first test coverage for several modules, and shortened review turnaround with Docker deployment and an automated AI PR-review workflow in Bitbucket Pipelines.</li>
+              </ul>
+              <div className="mb-1 flex flex-wrap gap-1.5">
+                <Badge>Python</Badge>
+                <Badge>FastAPI</Badge>
+                <Badge>SQLAlchemy 2.0</Badge>
+                <Badge>Alembic</Badge>
+                <Badge>PostgreSQL</Badge>
+                <Badge>pgvector</Badge>
+                <Badge>sentence-transformers</Badge>
+                <Badge>AWS Textract</Badge>
+                <Badge>OpenAI</Badge>
+                <Badge>Dagster</Badge>
+                <Badge>pytest</Badge>
+                <Badge>Docker</Badge>
+              </div>
+            </div>
+        </Card>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Project 1 */}
         <Card className="scroll-animate scroll-animate-delay-2 overflow-hidden !p-0">
             <div style={{
@@ -215,6 +261,7 @@ const Projects = () => {
               </div>
             </div>
         </Card>
+        </div>
     </div>
   </section>
   );
