@@ -4,44 +4,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer style={{
-      backgroundColor: '#1e3a8a',
-      padding: '25px 0',
-      marginTop: '80px',
-      borderTop: '3px solid #3b82f6',
-      boxShadow: '0 -4px 6px rgba(0, 0, 0, 0.1)'
-    }}>
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 20px',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexWrap: 'wrap'
-      }}>
-        <p style={{
-          color: '#ffffff',
-          fontSize: '16px',
-          margin: '0',
-          fontWeight: '400',
-          letterSpacing: '0.5px'
-        }}>
+    <footer className="bg-surface-900 border-t border-white/10 py-6 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
+        <p className="text-white text-sm">
           &copy; {currentYear} Thinura Kahaduwa. All rights reserved.
         </p>
-        <div style={{
-          display: 'flex',
-          gap: '20px',
-          alignItems: 'center'
-        }}>
-          <span style={{
-            color: '#93c5fd',
-            fontSize: '14px',
-            fontWeight: '300'
-          }}>
-            Built with React & Vite
-          </span>
-        </div>
+        <span className="text-primary-300 text-xs">
+          Built with React &amp; Vite
+        </span>
       </div>
     </footer>
   );
