@@ -5,6 +5,12 @@ import SectionHeading from '../ui/SectionHeading';
 const devicon = (name, variant = 'original') =>
   `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}/${name}-${variant}.svg`;
 
+const databaseIcon =
+  'data:image/svg+xml;utf8,' +
+  encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg>`
+  );
+
 const CATEGORIES = [
   {
     title: 'Languages',
@@ -15,7 +21,7 @@ const CATEGORIES = [
       { name: 'Java', icon: devicon('java') },
       { name: 'C', icon: devicon('c') },
       { name: 'C++', icon: devicon('cplusplus') },
-      { name: 'SQL' },
+      { name: 'SQL', icon: databaseIcon },
     ],
   },
   {
@@ -40,7 +46,7 @@ const CATEGORIES = [
       { name: 'MySQL', icon: devicon('mysql') },
       { name: 'MongoDB', icon: devicon('mongodb') },
       { name: 'Firebase', icon: devicon('firebase', 'plain') },
-      { name: 'Supabase' },
+      { name: 'Supabase', icon: devicon('supabase') },
       { name: 'Prisma ORM' },
       { name: 'Node.js', icon: devicon('nodejs') },
       { name: 'Express', icon: devicon('express') },
@@ -58,8 +64,8 @@ const CATEGORIES = [
       { name: 'GitHub', icon: devicon('github'), invert: true },
       { name: 'Bitbucket Pipelines', icon: devicon('bitbucket') },
       { name: 'pytest' },
-      { name: 'Postman' },
-      { name: 'Jira' },
+      { name: 'Postman', icon: devicon('postman') },
+      { name: 'Jira', icon: devicon('jira') },
       { name: 'Figma', icon: devicon('figma') },
       { name: 'ClickUp', icon: 'https://juliety.com/wp-content/uploads/2023/08/desktop-app@2x-edited.png' },
     ],
@@ -72,7 +78,11 @@ const CATEGORIES = [
       { name: 'React Native', icon: devicon('react') },
       { name: 'HTML5', icon: devicon('html5') },
       { name: 'CSS', icon: devicon('css3') },
-      { name: 'Tailwind CSS', icon: devicon('tailwindcss', 'plain') },
+      {
+        name: 'Tailwind CSS',
+        icon: 'https://cdn.jsdelivr.net/npm/simple-icons@11/icons/tailwindcss.svg',
+        invert: true,
+      },
       { name: 'Chakra UI', icon: devicon('chakraui') },
     ],
   },
