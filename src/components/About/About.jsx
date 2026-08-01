@@ -1,4 +1,5 @@
-import React from 'react';  
+import React from 'react';
+import Card from '../ui/Card';  
 
 const About = () => (
   <section 
@@ -49,14 +50,7 @@ const About = () => (
         
         {/* Skills/Services Content */}
         <div className="flex-1 scroll-animate-right">
-          <div className="animated-border" style={{
-            borderRadius: '15px',
-            backdropFilter: 'blur(30px)',
-            WebkitBackdropFilter: 'blur(30px)',
-            border: '1px solid rgba(255,255,255,0.2)',
-            padding: '40px 35px',
-            position: 'relative'
-          }}>
+          <Card>
             <h4 className="text-white text-xl md:text-2xl mb-6">What I Do</h4>
             <div className="space-y-6">
               <div>
@@ -78,7 +72,7 @@ const About = () => (
                 </p>
               </div>
             </div>
-          </div>
+          </Card>
         </div>
       </div>
     </div>
