@@ -1,196 +1,71 @@
 import React from 'react';
+import Card from '../ui/Card';
+import SectionHeading from '../ui/SectionHeading';
+
+const CATEGORIES = [
+  {
+    title: 'Frontend & Frameworks',
+    skills: [
+      { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+      { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
+      { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
+      { name: 'CSS3', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
+      { name: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
+      { name: 'DotNet', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg' },
+    ],
+  },
+  {
+    title: 'Backend & Databases',
+    skills: [
+      { name: 'Node.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+      { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
+      { name: 'Spring Boot', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg' },
+      { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
+      { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
+      { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+    ],
+  },
+  {
+    title: 'Tools & Others',
+    skills: [
+      { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+      { name: 'ClickUp', icon: 'https://juliety.com/wp-content/uploads/2023/08/desktop-app@2x-edited.png' },
+      { name: 'Azure', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg' },
+      { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+      { name: 'VS Code', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+      { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', invert: true },
+    ],
+  },
+];
 
 const Skills = () => (
-  <section id="skills" style={{ padding: '80px 0', background: 'linear-gradient(180deg, #151515 0%, #0e1117 50%, #121212 100%)', width: '100vw', maxWidth: '100vw', overflowX: 'hidden' }}>
-    <div className="w-full px-4 md:px-8" style={{ width: '100%' }}>
-      <div className="text-center mb-5 scroll-animate">
-        <h2 style={{ fontSize: '3rem', fontWeight: 700, color: '#fff', marginBottom: '20px' }}>
-          My Skills
-        </h2>
-        <div style={{ width: '60px', height: '4px', background: '#185adb', margin: '0 auto 30px' }}></div>
-        <p style={{ color: '#eaf0fb', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
-          Here are the technologies and tools I work with to bring ideas to life.
-        </p>
-      </div>
-      
-      <div className="row">
-        {/* Frontend & Frameworks */}
-        <div className="col-lg-4 mb-4 scroll-animate scroll-animate-delay-1">
-          <div className="animated-border" style={{ 
-            borderRadius: '15px',
-            backdropFilter: 'blur(30px)',
-            WebkitBackdropFilter: 'blur(30px)',
-            border: '1px solid rgba(255,255,255,0.2)',
-            position: 'relative',
-            padding: '30px', 
-            height: '100%' 
-          }}>
-            <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Frontend & Frameworks</h4>
-            <div className="row text-center">
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" 
-                       alt="React" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>React</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
-                       alt="JavaScript" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>JavaScript</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
-                       alt="HTML5" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>HTML5</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
-                       alt="CSS3" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>CSS3</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" 
-                       alt="Bootstrap" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Bootstrap</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" 
-                       alt="DotNet" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>DotNet</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <section id="skills" className="py-16 md:py-24 px-4 md:px-8">
+    <SectionHeading
+      title="My Skills"
+      subtitle="Here are the technologies and tools I work with to bring ideas to life."
+    />
 
-        {/* Backend & Databases */}
-        <div className="col-lg-4 mb-4 scroll-animate scroll-animate-delay-2">
-          <div className="animated-border" style={{ 
-            borderRadius: '15px',
-            backdropFilter: 'blur(30px)',
-            WebkitBackdropFilter: 'blur(30px)',
-            border: '1px solid rgba(255,255,255,0.2)',
-            position: 'relative',
-            padding: '30px', 
-            height: '100%' 
-          }}>
-            <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Backend & Databases</h4>
-            <div className="row text-center">
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" 
-                       alt="Node.js" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Node.js</span>
-                </div>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      {CATEGORIES.map(({ title, skills }, i) => (
+        <Card key={title} className={`scroll-animate scroll-animate-delay-${i + 1}`}>
+          <h4 className="text-primary-400 text-center text-lg md:text-xl mb-8">{title}</h4>
+          <div className="grid grid-cols-3 gap-6">
+            {skills.map(({ name, icon, invert }) => (
+              <div
+                key={name}
+                className="flex flex-col items-center gap-2 transition-transform duration-300 ease-out hover:-translate-y-1"
+              >
+                <img
+                  src={icon}
+                  alt={name}
+                  className={`w-10 h-10 md:w-12 md:h-12 ${invert ? 'invert' : ''}`}
+                />
+                <span className="text-white text-xs md:text-sm text-center">{name}</span>
               </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
-                       alt="Python" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Python</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" 
-                       alt="Spring Boot" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Spring Boot</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" 
-                       alt="Firebase" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Firebase</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" 
-                       alt="PostgreSQL" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>PostgreSQL</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" 
-                       alt="MySQL" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>MySQL</span>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
-        </div>
-
-        {/* Tools & Others */}
-        <div className="col-lg-4 mb-4 scroll-animate scroll-animate-delay-3">
-          <div className="animated-border" style={{ 
-            borderRadius: '15px',
-            backdropFilter: 'blur(30px)',
-            WebkitBackdropFilter: 'blur(30px)',
-            border: '1px solid rgba(255,255,255,0.2)',
-            position: 'relative',
-            padding: '30px', 
-            height: '100%' 
-          }}>
-            <h4 style={{ color: '#4a9eff', marginBottom: '30px', textAlign: 'center' }}>Tools & Others</h4>
-            <div className="row text-center">
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" 
-                       alt="Git" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Git</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://juliety.com/wp-content/uploads/2023/08/desktop-app@2x-edited.png" 
-                       alt="ClickUp" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>ClickUp</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" 
-                       alt="Azure" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Azure</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" 
-                       alt="Figma" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>Figma</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" 
-                       alt="VS Code" style={{ width: '50px', height: '50px', marginBottom: '10px' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>VS Code</span>
-                </div>
-              </div>
-              <div className="col-6 mb-4">
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
-                       alt="GitHub" style={{ width: '50px', height: '50px', marginBottom: '10px', filter: 'invert(1)' }} />
-                  <span style={{ color: '#fff', fontSize: '0.9rem' }}>GitHub</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        </Card>
+      ))}
     </div>
   </section>
 );
