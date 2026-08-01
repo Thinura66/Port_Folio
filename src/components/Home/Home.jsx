@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import profileImg from '../../assets/Profile.png';
 import cvFile from '../../assets/224097E CV.pdf';
+import Button from '../ui/Button';
 
 const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -36,10 +37,10 @@ const Home = () => {
           {/* Profile Image - Mobile Only (appears after name) */}
           <div className="flex justify-center lg:hidden mb-6">
             <div className="relative">
-              <img 
-                src={profileImg} 
-                alt="Thinura Kahaduwa" 
-                className={`w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-full border-4 border-white shadow-2xl ${isLoaded ? 'animate-drop-from-top animate-delay-2 floating' : 'animate-on-load'}`}
+              <img
+                src={profileImg}
+                alt="Thinura Kahaduwa"
+                className={`w-48 h-48 sm:w-56 sm:h-56 object-cover rounded-full ring-4 ring-primary-400/60 shadow-2xl ${isLoaded ? 'animate-drop-from-top animate-delay-2 floating' : 'animate-on-load'}`}
                 style={{ aspectRatio: '1/1', minWidth: '12rem', minHeight: '12rem' }}
               />
             </div>
@@ -56,77 +57,22 @@ const Home = () => {
             I enjoy building innovative, user-friendly solutions and turning creative ideas into functional applications.
           </p>
           
-          <div className={`mb-6 lg:mb-8 ${isLoaded ? 'animate-fade-in-up animate-delay-3' : 'animate-on-load'}`}>
-            <a 
-              href={cvFile}
-              download="Thinura_Kahaduwa_CV.pdf"
-              style={{
-                display: 'inline-block',
-                padding: '12px 30px',
-                background: 'linear-gradient(135deg, #185adb 0%, #4a9eff 100%)',
-                color: '#fff',
-                border: 'none',
-                borderRadius: '8px',
-                fontSize: '1rem',
-                fontWeight: '600',
-                textDecoration: 'none',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 4px 15px rgba(24, 90, 219, 0.3)',
-                marginRight: '15px',
-                marginBottom: '15px'
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 6px 20px rgba(24, 90, 219, 0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = '0 4px 15px rgba(24, 90, 219, 0.3)';
-              }}
-            >
+          <div className={`mb-6 lg:mb-8 flex flex-wrap gap-4 justify-center lg:justify-start ${isLoaded ? 'animate-fade-in-up animate-delay-3' : 'animate-on-load'}`}>
+            <Button as="a" variant="primary" href={cvFile} download="Thinura_Kahaduwa_CV.pdf">
               📄 Download CV
-            </a>
-            <a 
-              href="#projects"
-              style={{
-                display: 'inline-block',
-                padding: '12px 30px',
-                background: 'transparent',
-                color: '#4a9eff',
-                border: '2px solid #4a9eff',
-                borderRadius: '8px',
-                fontSize: '1rem',
-                fontWeight: '600',
-                textDecoration: 'none',
-                transition: 'all 0.3s ease',
-                marginBottom: '15px',
-                minWidth: '162px',
-                textAlign: 'center'
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.background = '#4a9eff';
-                e.target.style.color = '#fff';
-                e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 6px 20px rgba(74, 158, 255, 0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.background = 'transparent';
-                e.target.style.color = '#4a9eff';
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = 'none';
-              }}
-            >
+            </Button>
+            <Button as="a" variant="secondary" href="#projects">
               🚀 View My Work
-            </a>
+            </Button>
           </div>
         </div>
         
         {/* Profile Image - Desktop Only */}
         <div className="hidden lg:flex flex-1 justify-center">
-          <img 
-            src={profileImg} 
-            alt="Thinura Kahaduwa" 
-            className={`w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-full border-8 border-white shadow-2xl ${isLoaded ? 'animate-drop-from-top animate-delay-2 floating' : 'animate-on-load'}`}
+          <img
+            src={profileImg}
+            alt="Thinura Kahaduwa"
+            className={`w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 object-cover rounded-full ring-4 ring-primary-400/60 shadow-2xl shadow-primary-900/50 ${isLoaded ? 'animate-drop-from-top animate-delay-2 floating' : 'animate-on-load'}`}
           />
         </div>
       </div>
