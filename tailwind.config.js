@@ -18,10 +18,15 @@ export default {
           700: '#1e4a80',
           800: '#1a3d6a',
           900: '#0a1931',
-        }
+        },
+        surface: {
+          900: '#0b0f19',
+          800: '#111827',
+          700: '#1a2332',
+        },
       },
       fontFamily: {
-        sans: ['Arial', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
       }
     },
   },
