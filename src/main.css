@@ -275,7 +275,6 @@ section:nth-child(6) { animation-delay: 0.6s; }
     border-radius: 50% !important;
     aspect-ratio: 1/1 !important;
     object-fit: cover !important;
-    border: 4px solid white !important;
   }
 
   /* Smaller profile photo for very small screens */
@@ -286,31 +285,6 @@ section:nth-child(6) { animation-delay: 0.6s; }
       min-width: 10rem !important;
       min-height: 10rem !important;
     }
-  }
-
-  /* Bootstrap column fixes for mobile - more flexible */
-  .row {
-    margin-left: -0.1rem !important;
-    margin-right: -0.1rem !important;
-  }
-
-  .col-lg-4, .col-lg-8, .col-md-6 {
-    padding-left: 0.1rem !important;
-    padding-right: 0.1rem !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-
-  /* Contact section specific mobile fixes */
-  #contact .row {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  #contact .col-lg-4,
-  #contact .col-lg-8 {
-    padding: 0.25rem !important;
-    margin-bottom: 1.5rem !important;
   }
 
   /* Contact Information Card and Message Form Mobile Optimization - Make wider */
@@ -341,18 +315,6 @@ section:nth-child(6) { animation-delay: 0.6s; }
     padding: 0.5rem 0.5rem 0.5rem 0.25rem !important;
     min-height: 50px !important;
     gap: 8px !important;
-  }
-
-  /* Contact Icon Circles */
-  #contact div[style*="width: 50px"],
-  #contact div[style*="marginRight: 15px"] {
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
-    min-height: 40px !important;
-    margin-right: 8px !important;
-    margin-left: 0 !important;
-    flex-shrink: 0 !important;
   }
 
   /* Contact Text Container */
@@ -514,11 +476,6 @@ section:nth-child(6) { animation-delay: 0.6s; }
 }
 
 @media (min-width: 769px) {
-  section {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-  
   /* Desktop profile photo positioning - center it better */
   .lg\\:justify-center img[alt="Thinura Kahaduwa"] {
     margin-left: auto !important;
@@ -1312,27 +1269,6 @@ section {
   scroll-margin-top: 60px;
   position: relative;
   z-index: 2;
-}
-
-/* Section overlays for subtle color variations */
-section#home {
-  background: linear-gradient(180deg, rgba(10, 25, 49, 0.1) 0%, rgba(24, 90, 219, 0.1) 50%, rgba(26, 26, 26, 0.1) 100%) !important;
-}
-
-section#about {
-  background: linear-gradient(180deg, rgba(26, 26, 26, 0.1) 0%, rgba(15, 20, 25, 0.1) 50%, rgba(21, 21, 21, 0.1) 100%) !important;
-}
-
-section#skills {
-  background: linear-gradient(180deg, rgba(21, 21, 21, 0.1) 0%, rgba(10, 25, 49, 0.1) 50%, rgba(24, 90, 219, 0.1) 100%) !important;
-}
-
-section#projects {
-  background: linear-gradient(180deg, rgba(24, 90, 219, 0.1) 0%, rgba(26, 26, 26, 0.1) 50%, rgba(15, 20, 25, 0.1) 100%) !important;
-}
-
-section#contact {
-  background: linear-gradient(180deg, rgba(15, 20, 25, 0.1) 0%, rgba(10, 25, 49, 0.1) 30%, rgba(24, 90, 219, 0.1) 100%) !important;
 }
 
 /* Flowing Skills Icons Background Animation */

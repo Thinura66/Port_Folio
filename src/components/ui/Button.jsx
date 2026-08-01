@@ -6,10 +6,13 @@ const VARIANTS = {
   secondary: 'bg-transparent text-primary-400 border-2 border-primary-400 hover:bg-primary-400 hover:text-white hover:-translate-y-0.5',
 };
 
-const Button = ({ variant = 'primary', as: Component = 'a', className = '', children, ...props }) => (
-  <Component className={`${BASE} ${VARIANTS[variant]} ${className}`} {...props}>
-    {children}
-  </Component>
-);
+const Button = ({ variant = 'primary', as = 'a', className = '', children, ...props }) => {
+  const Component = as;
+  return (
+    <Component className={`${BASE} ${VARIANTS[variant]} ${className}`} {...props}>
+      {children}
+    </Component>
+  );
+};
 
 export default Button;

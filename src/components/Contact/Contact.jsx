@@ -131,7 +131,7 @@ const Contact = () => {
 
               <div style={{ marginBottom: '30px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-primary-400">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center mr-3 md:mr-4 bg-primary-400 shrink-0">
                     <span style={{ color: '#0a1931', fontSize: '1.2rem', fontWeight: 'bold' }}>📧</span>
                   </div>
                   <div>
@@ -143,7 +143,7 @@ const Contact = () => {
 
               <div style={{ marginBottom: '30px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-primary-400">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center mr-3 md:mr-4 bg-primary-400 shrink-0">
                     <span style={{ color: '#0a1931', fontSize: '1.2rem', fontWeight: 'bold' }}>📱</span>
                   </div>
                   <div>
@@ -155,7 +155,7 @@ const Contact = () => {
 
               <div style={{ marginBottom: '30px' }}>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 bg-primary-400">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center mr-3 md:mr-4 bg-primary-400 shrink-0">
                     <span style={{ color: '#0a1931', fontSize: '1.2rem', fontWeight: 'bold' }}>📍</span>
                   </div>
                   <div>
