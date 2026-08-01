@@ -123,9 +123,9 @@ const Contact = () => {
         subtitle="Have a project in mind? Let's discuss how we can work together to bring your ideas to life."
       />
       <div className="w-full" style={{ width: '100%' }}>
-        <div className="row" style={{ margin: '0', padding: '0 0.5rem' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-2" style={{ margin: '0', padding: '0 0.5rem' }}>
           {/* Contact Information */}
-          <div className="col-lg-4 mb-5 scroll-animate-left" style={{ padding: '0.5rem' }}>
+          <div className="lg:col-span-4 mb-5 scroll-animate-left" style={{ padding: '0.5rem' }}>
             <Card>
               <h3 style={{ color: '#fff', marginBottom: '35px', fontSize: '1.5rem' }}>Contact Information</h3>
 
@@ -279,7 +279,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="col-lg-8 scroll-animate-right" style={{ padding: '0.5rem' }}>
+          <div className="lg:col-span-8 scroll-animate-right" style={{ padding: '0.5rem' }}>
             <Card>
               <h3 style={{ color: '#fff', marginBottom: '30px', fontSize: '1.8rem' }}>Send Me A Message</h3>
               
@@ -344,8 +344,8 @@ const Contact = () => {
                   />
                 </div>
                 
-                <div className="row">
-                  <div className="col-md-6 mb-3">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="mb-3">
                     <input
                       type="email"
                       name="email"
@@ -365,7 +365,7 @@ const Contact = () => {
                       }}
                     />
                   </div>
-                  <div className="col-md-6 mb-3">
+                  <div className="mb-3">
                     <input
                       type="tel"
                       name="phone"
