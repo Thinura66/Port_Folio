@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import profileImg from '../../assets/Profile.png';
-import cvFile from '../../assets/224097E CV.pdf';
+import cvFile from '../../assets/Thinura Kahaduwa CV 2026.pdf';
 import Button from '../ui/Button';
 
 const Home = () => {
@@ -58,7 +58,7 @@ const Home = () => {
           </p>
           
           <div className={`mb-6 lg:mb-8 flex flex-wrap gap-4 justify-center lg:justify-start ${isLoaded ? 'animate-fade-in-up animate-delay-3' : 'animate-on-load'}`}>
-            <Button as="a" variant="primary" href={cvFile} download="Thinura_Kahaduwa_CV.pdf">
+            <Button as="a" variant="primary" href={cvFile} download="Thinura Kahaduwa CV 2026.pdf">
               📄 Download CV
             </Button>
             <Button as="a" variant="secondary" href="#projects">
